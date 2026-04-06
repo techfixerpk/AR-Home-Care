@@ -1,1 +1,258 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>About Us | AR (Active Response) Nursing Home Care</title>
+<style>
+:root{
+--primary:#00d1ff;
+--secondary:#0055ff;
+--bg:#050505;
+--surface:#111;
+--text:#ffffff;
+--accent:#ff3366;
+--glass:rgba(255,255,255,0.05);
+--border:rgba(255,255,255,0.1);
+--neo-shadow:20px 20px 60px #000,-5px -5px 20px rgba(255,255,255,0.02);
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Roboto,sans-serif;-webkit-font-smoothing:antialiased;}
+body{background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;min-height:100vh;}
+::-webkit-scrollbar{width:6px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:var(--primary);border-radius:10px;}
+.canvas-bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;background:radial-gradient(circle at 50% 50%,#111 0%,#050505 100%);}
+.grid-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:40px 40px;z-index:-1;opacity:0.2;}
+nav{position:fixed;top:0;width:100%;height:80px;background:var(--glass);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 10%;z-index:1000;}
+.logo{font-size:1.8rem;font-weight:900;letter-spacing:-1px;display:flex;align-items:center;gap:10px;}
+.logo span{color:var(--primary);text-shadow:0 0 15px var(--primary);}
+.nav-links{display:flex;gap:30px;}
+.nav-links a{text-decoration:none;color:var(--text);font-size:0.9rem;font-weight:500;text-transform:uppercase;transition:0.3s;opacity:0.7;}
+.nav-links a:hover,.nav-links a.active{opacity:1;color:var(--primary);}
+.hero-section{padding-top:150px;min-height:60vh;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;}
+.badge{background:var(--secondary);color:white;padding:5px 15px;border-radius:50px;font-size:0.7rem;font-weight:800;text-transform:uppercase;margin-bottom:20px;box-shadow:0 0 20px rgba(0,85,255,0.4);}
+h1{font-size:4rem;font-weight:900;background:linear-gradient(to bottom,#fff 40%,#666);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:10px;line-height:1;}
+.tagline{font-size:1.2rem;opacity:0.6;max-width:600px;margin:0 auto 40px;}
+.about-container{width:100%;max-width:1200px;margin:0 auto;padding:40px 20px;position:relative;z-index:1;}
+.main-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+.content-box{background:var(--surface);border:1px solid var(--border);padding:50px;border-radius:30px;box-shadow:var(--neo-shadow);position:relative;overflow:hidden;}
+.content-box::before{content:'';position:absolute;top:0;left:0;width:100%;height:5px;background:linear-gradient(90deg,var(--primary),var(--secondary));}
+  <style>
+.poly-shape{position:absolute;right:-50px;bottom:-50px;width:300px;height:300px;background:var(--secondary);clip-path:polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);opacity:0.05;z-index:0;}
+.value-card{background:rgba(255,255,255,0.02);border-left:4px solid var(--primary);padding:20px;margin-bottom:20px;transition:0.4s;cursor:default;}
+.value-card:hover{background:rgba(0,209,255,0.05);transform:translateX(10px);}
+.value-card h3{color:var(--primary);font-size:1.1rem;margin-bottom:5px;text-transform:uppercase;}
+.value-card p{font-size:0.9rem;opacity:0.7;}
+.stat-box{display:flex;gap:30px;margin-top:40px;}
+.stat-item{text-align:left;}
+.stat-val{font-size:2.5rem;font-weight:900;color:var(--text);display:block;}
+.stat-label{font-size:0.7rem;color:var(--primary);text-transform:uppercase;letter-spacing:2px;}
+.visual-side{position:relative;height:500px;display:flex;justify-content:center;align-items:center;}
+.medical-cross{width:200px;height:200px;background:var(--primary);clip-path:polygon(33% 0%, 66% 0%, 66% 33%, 100% 33%, 100% 66%, 66% 66%, 66% 100%, 33% 100%, 33% 66%, 0% 66%, 0% 33%, 33% 33%);filter:drop-shadow(0 0 30px var(--primary));animation:pulse 4s infinite;}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:0.8;}50%{transform:scale(1.1);opacity:1;}}
+.floating-dots{position:absolute;width:100%;height:100%;background-image:radial-gradient(var(--primary) 1px,transparent 1px);background-size:20px 20px;mask-image:linear-gradient(to bottom,transparent,black,transparent);opacity:0.2;}
+</style>
+</head>
+<body>
+<div class="canvas-bg"></div>
+<div class="grid-overlay"></div>
+<nav>
+<div class="logo">AR <span>(ACTIVE RESPONSE)</span></div>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="inventory.html">Equipments</a>
+<a href="about-us.html" class="active">About</a>
+<a href="contact.html">Contact</a>
+</div>
+</nav>
+<div class="hero-section">
+<div class="badge">Amanatdari & Excellence</div>
+<h1>Our Legacy.</h1>
+<p class="tagline">Providing industrial-grade home healthcare solutions across Islamabad and Rawalpindi with 24/7 active response integrity.</p>
+</div>
+<div class="about-container">
+<div class="main-grid">
+<div class="content-box">
+<div class="poly-shape"></div>
+<h2>Who We Are</h2>
+<p style="margin-bottom:30px;opacity:0.8;">Founded by Malik Awais Babar, AR (Active Response) is not just a nursing service; it is a commitment to professional healthcare excellence. We bridge the gap between hospital-grade care and the comfort of your home.</p>
+<div class="value-card">
+<h3>Amanatdari (Integrity)</h3>
+<p>Every patient is a trust. We handle medical care with 100% transparency and honesty, ensuring no hidden costs or compromised quality.</p>
+</div>
+<div class="value-card">
+<h3>Active Response</h3>
+<p>In medical emergencies, every second counts. Our protocols are designed for rapid deployment of staff and equipment.</p>
+</div>
+<div class="stat-box">
+<div class="stat-item"><span class="stat-val">24/7</span><span class="stat-label">Availability</span></div>
+<div class="stat-item"><span class="stat-val">100%</span><span class="stat-label">Native Logic</span></div>
+<div class="stat-item"><span class="stat-val">500+</span><span class="stat-label">Safe Deliveries</span></div>
+</div>
+</div>
+<div class="visual-side">
+<div class="floating-dots"></div>
+<div class="medical-cross"></div>
+<div class="overlay-info">
+<div class="info-pill" style="top:10%;left:5%;">24/7 Support</div>
+<div class="info-pill" style="bottom:15%;right:10%;">Expert Staff</div>
+</div>
+<style>
+.overlay-info{position:absolute;width:100%;height:100%;pointer-events:none;}
+.info-pill{position:absolute;background:var(--glass);backdrop-filter:blur(10px);border:1px solid var(--border);padding:10px 20px;border-radius:100px;font-size:0.8rem;color:var(--primary);font-weight:700;letter-spacing:1px;box-shadow:0 10px 30px rgba(0,0,0,0.5);}
+</style>
+</div>
+</div>
+
+<div class="ceo-container" style="margin-top:80px;">
+<div class="ceo-card">
+<div class="ceo-avatar-box">
+<div class="avatar-hex">
+<div class="hex-inner">
+<div class="user-silhouette"></div>
+</div>
+</div>
+</div>
+<div class="ceo-details">
+<span class="label">Founder & CEO</span>
+<h2 style="font-size:2.5rem;margin:5px 0;">Malik Awais Babar</h2>
+<p style="opacity:0.7;max-width:700px;margin-bottom:20px;">Dedicated to revolutionizing home healthcare in Pakistan. With a focus on the Rawalpindi and Islamabad sectors, our mission is to provide life-saving equipment and professional nursing care with the highest standards of Amanatdari.</p>
+<div class="contact-grid">
+<div class="c-item"><span>Email:</span> malikawaisbabar143@gmail.com</div>
+<div class="c-item"><span>Primary:</span> 03125166507</div>
+<div class="c-item"><span>Secondary:</span> 03472241304</div>
+</div>
+</div>
+</div>
+</div>
+
+<style>
+.ceo-card{background:var(--surface);border:1px solid var(--border);border-radius:30px;padding:60px;display:flex;gap:50px;align-items:center;position:relative;overflow:hidden;box-shadow:var(--neo-shadow);}
+.ceo-avatar-box{flex-shrink:0;}
+.avatar-hex{width:220px;height:220px;background:var(--primary);clip-path:polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);padding:5px;}
+.hex-inner{width:100%;height:100%;background:var(--bg);clip-path:polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);display:flex;justify-content:center;align-items:center;position:relative;}
+.user-silhouette{width:100px;height:100px;background:var(--primary);clip-path:path('M50,10 C35,10 25,20 25,35 C25,50 35,60 50,60 C65,60 75,50 75,35 C75,20 65,10 50,10 Z M20,90 C20,70 30,65 50,65 C70,65 80,70 80,90 L80,100 L20,100 Z');opacity:0.8;}
+.ceo-details .label{color:var(--primary);font-weight:800;font-size:0.8rem;text-transform:uppercase;letter-spacing:3px;}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;border-top:1px solid var(--border);padding-top:20px;}
+.c-item{font-size:0.9rem;opacity:0.8;}
+.c-item span{color:var(--primary);font-weight:700;margin-right:10px;}
+@media (max-width:968px){.main-grid,.ceo-card{grid-template-columns:1fr;flex-direction:column;padding:30px;}.ceo-avatar-box{margin-bottom:20px;}}
+</style>
+<div class="excellence-grid" style="margin-top:80px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+<div class="ex-card">
+<div class="ex-icon icu-spec"></div>
+<h3>ICU Specialized</h3>
+<p>Hospital-grade monitoring and life-support management by certified professionals.</p>
+</div>
+<div class="ex-card">
+<div class="ex-icon oxygen-spec"></div>
+<h3>Respiratory Care</h3>
+<p>Advanced Oxygen Concentrators and BiPAP machines available for immediate deployment.</p>
+</div>
+<div class="ex-card">
+<div class="ex-icon recovery-spec"></div>
+<h3>Post-Op Recovery</h3>
+<p>Specialized wound care and physiotherapy protocols for faster patient rehabilitation.</p>
+</div>
+</div>
+
+<style>
+.ex-card{background:var(--glass);border:1px solid var(--border);padding:40px;border-radius:25px;text-align:center;transition:0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);position:relative;overflow:hidden;}
+.ex-card:hover{background:var(--surface);transform:translateY(-15px);border-color:var(--primary);box-shadow:0 20px 40px rgba(0,0,0,0.4);}
+.ex-card h3{font-size:1.3rem;margin-bottom:15px;color:var(--text);letter-spacing:1px;}
+.ex-card p{font-size:0.85rem;opacity:0.6;line-height:1.6;}
+.ex-icon{width:60px;height:60px;margin:0 auto 25px;background:var(--primary);position:relative;}
+.icu-spec{clip-path:polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);}
+.oxygen-spec{clip-path:polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);}
+.recovery-spec{clip-path:polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);}
+.ex-card::after{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(0,209,255,0.1) 0%,transparent 70%);opacity:0;transition:0.5s;}
+.ex-card:hover::after{opacity:1;}
+</style>
+
+<div class="cta-banner" style="margin-top:100px;background:linear-gradient(45deg,var(--secondary),var(--primary));padding:80px;border-radius:40px;text-align:center;position:relative;overflow:hidden;box-shadow:0 30px 60px rgba(0,85,255,0.3);">
+<div class="poly-bg-2"></div>
+<h2 style="font-size:3rem;font-weight:900;color:white;margin-bottom:20px;position:relative;z-index:1;">Ready to Experience Excellence?</h2>
+<p style="color:rgba(255,255,255,0.9);max-width:700px;margin:0 auto 30px;position:relative;z-index:1;font-size:1.1rem;">Hamari team Islamabad aur Rawalpindi mein 24/7 mojud hai. Abhi rabta karein aur professional care hasil karein.</p>
+<div class="cta-btns" style="display:flex;gap:20px;justify-content:center;position:relative;z-index:1;">
+<a href="tel:03125166507" class="main-btn">Call Primary</a>
+<a href="mailto:malikawaisbabar143@gmail.com" class="alt-btn">Send Email</a>
+</div>
+</div>
+
+<style>
+.poly-bg-2{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.1);clip-path:polygon(0 0, 100% 0, 100% 30%, 0 70%);}
+.main-btn,.alt-btn{padding:15px 40px;border-radius:100px;text-decoration:none;font-weight:800;text-transform:uppercase;font-size:0.9rem;transition:0.3s;letter-spacing:1px;}
+.main-btn{background:white;color:var(--secondary);box-shadow:0 10px 20px rgba(0,0,0,0.1);}
+.main-btn:hover{transform:scale(1.05);background:var(--bg);color:white;}
+.alt-btn{border:2px solid white;color:white;}
+.alt-btn:hover{background:white;color:var(--secondary);}
+@media (max-width:768px){.excellence-grid{grid-template-columns:1fr;}.cta-banner{padding:40px 20px;}.cta-btns{flex-direction:column;}}
+</style>
+<footer style="margin-top:120px;padding:60px 20px;border-top:1px solid var(--border);background:rgba(255,255,255,0.01);">
+<div class="footer-grid" style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:50px;max-width:1200px;margin:0 auto;">
+<div class="f-info">
+<div class="logo" style="margin-bottom:20px;">AR <span>(ACTIVE RESPONSE)</span></div>
+<p style="opacity:0.6;font-size:0.9rem;">Providing professional, hospital-grade nursing and equipment services in Islamabad and Rawalpindi. Built on the principles of Amanatdari and excellence by Malik Awais Babar.</p>
+</div>
+<div class="f-links">
+<h4 style="margin-bottom:20px;color:var(--primary);">Quick Access</h4>
+<ul style="list-style:none;">
+<li style="margin-bottom:10px;"><a href="services.html" style="color:white;text-decoration:none;opacity:0.6;">Medical Services</a></li>
+<li style="margin-bottom:10px;"><a href="inventory.html" style="color:white;text-decoration:none;opacity:0.6;">Equipment Rental</a></li>
+<li style="margin-bottom:10px;"><a href="contact.html" style="color:white;text-decoration:none;opacity:0.6;">Book Now</a></li>
+</ul>
+</div>
+<div class="f-contact">
+<h4 style="margin-bottom:20px;color:var(--primary);">Direct Lines</h4>
+<p style="font-size:0.9rem;opacity:0.8;margin-bottom:5px;">03125166507</p>
+<p style="font-size:0.9rem;opacity:0.8;margin-bottom:5px;">03472241304</p>
+<p style="font-size:0.8rem;opacity:0.5;">Rawalpindi/Islamabad, Pakistan</p>
+</div>
+</div>
+<div style="text-align:center;margin-top:60px;padding-top:20px;border-top:1px solid var(--border);font-size:0.7rem;opacity:0.4;letter-spacing:2px;">
+© 2026 AR ACTIVE RESPONSE | PROTOCOL V6.0 | DESIGNED BY TECHFIXER
+</div>
+</footer>
+
+</div> <script>
+// Universal Protocol: Self-Healing Memory Flush & Performance Logic
+const ProtocolEngine = {
+    init() {
+        this.applyDeltaScaling();
+        this.setupMemoryFlush();
+        console.log("AR-Protocol: Active Response System Operational");
+    },
+    applyDeltaScaling() {
+        // Optimized for 4GB RAM devices
+        const elements = document.querySelectorAll('.ex-card, .value-card');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        elements.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+            observer.observe(el);
+        });
+    },
+    setupMemoryFlush() {
+        window.addEventListener('beforeunload', () => {
+            // Clear temporary UI states for next session
+            localStorage.removeItem('ar_temp_nav');
+            console.log("Memory Flush: Garbage collection triggered.");
+        });
+    }
+};
+
+document.addEventListener('DOMContentLoaded', () => ProtocolEngine.init());
+</script>
+</body>
+</html>
