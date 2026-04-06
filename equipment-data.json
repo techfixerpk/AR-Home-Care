@@ -1,1 +1,258 @@
 
+{
+  "metadata": {
+    "agency": "AR (Active Response) Nursing Home Care",
+    "ceo": "Malik Awais Babar",
+    "protocol": "V6.0",
+    "region": "Islamabad / Rawalpindi",
+    "integrity": "Amanatdari Verified"
+  },
+  "respiratory_systems": [
+    {
+      "id": "AR-OX-001",
+      "category": "Oxygen Therapy",
+      "name": "Industrial Oxygen Concentrator",
+      "specifications": [
+        "5L to 10L Capacity",
+        "Purity 93% ± 3%",
+        "Low Noise Operation",
+        "Continuous Flow"
+      ],
+      "application": "COVID Recovery, Asthma, COPD Support",
+      "status": "Available",
+      "action": "Rent / Sale",
+      "ui_geometry": "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)"
+    },
+    {
+      "id": "AR-BP-002",
+      "category": "Non-Invasive Ventilation",
+      "name": "BiPAP Machine (Auto)",
+      "specifications": [
+        "Advanced Pressure Support",
+        "Humidifier Integrated",
+        "Sleep Apnea Tracking",
+        "Portable Design"
+      ],
+      "application": "Respiratory Failure, Sleep Disorders",
+      "status": "Active Response Ready",
+      "action": "Rent / Sale",
+      "ui_geometry": "polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)"
+    },
+    {
+      "id": "AR-NB-003",
+      "category": "Nebulization",
+      "name": "Compressor Nebulizer",
+      "specifications": [
+        "Heavy Duty Motor",
+        "Fine Particle Size",
+        "Fast Medication Delivery",
+        "Washable Filters"
+      ],
+      "application": "Immediate Airway Clearance",
+      "status": "Available",
+      "action": "Sale Only",
+      "ui_geometry": "polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 25% 100%, 25% 75%, 0% 75%)"
+    }
+  ]
+    ,
+  "mobility_and_beds": [
+    {
+      "id": "AR-PB-004",
+      "category": "Patient Care",
+      "name": "Medical Patient Bed (Manual/Electric)",
+      "specifications": [
+        "Adjustable Backrest & Knee-rest",
+        "Side Rails for Safety",
+        "High-Density Mattress",
+        "Heavy Duty Lockable Castors"
+      ],
+      "application": "Post-Op Recovery, Bedridden Patient Care",
+      "status": "Available",
+      "action": "Rent / Sale",
+      "ui_geometry": "polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%)"
+    },
+    {
+      "id": "AR-WC-005",
+      "category": "Mobility Support",
+      "name": "Foldable Wheelchair (Lightweight)",
+      "specifications": [
+        "Steel/Aluminum Frame",
+        "Comfortable Padded Seating",
+        "Dual Braking System",
+        "Compact Foldable Design"
+      ],
+      "application": "Patient Transport, Disability Support",
+      "status": "Available",
+      "action": "Rent / Sale",
+      "ui_geometry": "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)"
+    }
+  ],
+  "monitoring_systems": [
+    {
+      "id": "AR-CM-006",
+      "category": "Vital Monitoring",
+      "name": "Multi-Para Cardiac Monitor",
+      "specifications": [
+        "ECG, NIBP, SpO2 Monitoring",
+        "High-Resolution Display",
+        "Alarm System for Vitals",
+        "Battery Backup Integrated"
+      ],
+      "application": "ICU at Home, Critical Care",
+      "status": "Active Response Ready",
+      "action": "Rent Only",
+      "ui_geometry": "polygon(10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10)"
+    },
+    {
+      "id": "AR-OXM-007",
+      "category": "Diagnostics",
+      "name": "Pulse Oximeter (Digital)",
+      "specifications": [
+        "Instant SpO2 & Pulse Rate",
+        "OLED Display",
+        "Auto Power Off",
+        "Medical Grade Accuracy"
+      ],
+      "application": "Routine Health Checks",
+      "status": "In-Stock",
+      "action": "Sale Only",
+      "ui_geometry": "polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)"
+    }
+  ]
+    ,
+  "nursing_procedures": [
+    {
+      "id": "AR-NS-008",
+      "category": "Critical Care",
+      "name": "ICU Trained Nursing Staff",
+      "specifications": [
+        "24/7 Bedside Monitoring",
+        "Ventilator Management",
+        "Tracheostomy Care",
+        "Vital Signs Recording"
+      ],
+      "application": "Critical & Comatose Patient Care",
+      "status": "Active Response Ready",
+      "action": "Service Only",
+      "ui_geometry": "polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%)"
+    },
+    {
+      "id": "AR-IV-009",
+      "category": "Medication",
+      "name": "IV Cannulation & Infusion",
+      "specifications": [
+        "Aseptic Insertion Technique",
+        "Medication Administration",
+        "Fluid Management",
+        "Drip Monitoring"
+      ],
+      "application": "Antibiotic Therapy, Dehydration",
+      "status": "Available",
+      "action": "On-Call Service",
+      "ui_geometry": "polygon(0 0, 100% 0, 85% 100%, 15% 100%)"
+    },
+    {
+      "id": "AR-NG-010",
+      "category": "Feeding Support",
+      "name": "NG Tube Insertion & Care",
+      "specifications": [
+        "Professional Tube Placement",
+        "Feeding Protocol Management",
+        "Tube Blockage Clearance",
+        "Patient Comfort Check"
+      ],
+      "application": "Patients with Swallowing Difficulties",
+      "status": "Available",
+      "action": "Procedural Visit",
+      "ui_geometry": "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
+    }
+  ],
+  "specialized_care": [
+    {
+      "id": "AR-WC-011",
+      "category": "Wound Management",
+      "name": "Advanced Wound Dressing",
+      "specifications": [
+        "Post-Surgical Wound Care",
+        "Bed Sore Management",
+        "Diabetic Foot Care",
+        "Infection Control"
+      ],
+      "application": "Chronic & Acute Wound Healing",
+      "status": "Active Response Ready",
+      "action": "Home Visit",
+      "ui_geometry": "polygon(0% 38%, 0% 62%, 38% 62%, 38% 100%, 62% 100%, 62% 62%, 100% 62%, 100% 38%, 62% 38%, 62% 0%, 38% 0%, 38% 38%)"
+    }
+  ]
+    ,
+  "rehabilitation_services": [
+    {
+      "id": "AR-PT-012",
+      "category": "Physiotherapy",
+      "name": "Expert Home Physiotherapy",
+      "specifications": [
+        "Stroke Rehabilitation",
+        "Post-Orthopedic Surgery Care",
+        "Chest Physiotherapy",
+        "Muscle Strengthening Protocols"
+      ],
+      "application": "Mobility Recovery & Pain Management",
+      "status": "Available",
+      "action": "Session Based",
+      "ui_geometry": "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)"
+    }
+  ],
+  "general_nursing": [
+    {
+      "id": "AR-GN-013",
+      "category": "Patient Care",
+      "name": "Male/Female Nursing Staff",
+      "specifications": [
+        "12/24 Hour Shifts",
+        "Medication Management",
+        "Hygiene & Personal Care",
+        "Basic Life Support (BLS) Certified"
+      ],
+      "application": "Geriatric & Routine Patient Care",
+      "status": "Available",
+      "action": "Staffing Contract",
+      "ui_geometry": "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
+    },
+    {
+      "id": "AR-DR-014",
+      "category": "Medical Visit",
+      "name": "Doctor at Home Visit",
+      "specifications": [
+        "General Health Assessment",
+        "Prescription Renewal",
+        "Clinical Guidance",
+        "Emergency Stabilization"
+      ],
+      "application": "Home-bound Patient Consultations",
+      "status": "Active Response Ready",
+      "action": "On-Call Visit",
+      "ui_geometry": "polygon(30% 0%, 70% 0%, 70% 30%, 100% 30%, 100% 70%, 70% 70%, 70% 100%, 30% 100%, 30% 70%, 0% 70%, 0% 30%, 30% 30%)"
+    }
+  ]
+    ,
+  "service_coverage": {
+    "primary_zones": ["Islamabad", "Rawalpindi"],
+    "sub_sectors": [
+      "DHA (Phase 1-5)",
+      "Bahria Town (Phase 1-8)",
+      "Gulberg Residencia",
+      "Saddar & Cantt Areas",
+      "F-6, F-7, F-8, F-10, F-11",
+      "G-6, G-7, G-8, G-9, G-10, G-11",
+      "Chamanabad & Surroundings"
+    ],
+    "emergency_response_time": "30-60 Minutes"
+  },
+  "emergency_protocols": {
+    "primary_contact": "03125166507",
+    "secondary_contact": "03472241304",
+    "email": "malikawaisbabar143@gmail.com",
+    "protocol_type": "Active Response (AR) V6.0",
+    "operating_hours": "24/7 Professional Availability"
+  }
+}
