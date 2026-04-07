@@ -1,1 +1,277 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Locations | AR (Active Response) Nursing Coverage</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Locations Node Specific Visuals */
+        .locations-hero {
+            padding: 160px 10% 60px;
+            background: radial-gradient(circle at top right, rgba(0, 255, 136, 0.03), transparent);
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+        }
+        .map-mesh-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
+            background-size: 30px 30px;
+            opacity: 0.1;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="ar-protocol-bg">
+
+    <nav class="nav-bar glass">
+        <div class="logo">
+            <div class="plus-icon"></div>
+            <span>AR NURSING</span>
+        </div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="locations.html" class="active">Coverage</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <button class="primary-btn emergency-trigger">0312 5166507</button>
+    </nav>
+
+    <section class="locations-hero">
+        <div class="map-mesh-bg"></div>
+        <div class="hero-content">
+            <div class="status-indicator" style="margin-bottom: 20px; border-color: var(--primary);">
+                <div class="status-dot" style="background: var(--primary);"></div>
+                <span style="color: var(--primary); letter-spacing: 2px;">TWIN_CITIES_ACTIVE_NODES</span>
+            </div>
+            <h1 class="glitch-text" data-text="SERVICE COVERAGE">SERVICE COVERAGE</h1>
+            <p class="subtitle" style="max-width: 650px;">Real-time mapping of our medical equipment delivery zones and nursing staff deployment across Rawalpindi and Islamabad.</p>
+            
+            <div class="region-stats" style="display: flex; gap: 30px; margin-top: 40px;">
+                <div style="border-left: 2px solid var(--primary); padding-left: 15px;">
+                    <span style="font-size: 0.7rem; color: var(--text-dim); display: block;">CORE_HUB</span>
+                    <strong style="color: #fff; letter-spacing: 1px;">RAWALPINDI</strong>
+                </div>
+                <div style="border-left: 2px solid var(--primary); padding-left: 15px;">
+                    <span style="font-size: 0.7rem; color: var(--text-dim); display: block;">SAT_NODE</span>
+                    <strong style="color: #fff; letter-spacing: 1px;">ISLAMABAD</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="zone-grid-section" style="padding: 100px 10%; background: #050505; border-top: 1px solid var(--border-color);">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;">
+            
+            <div class="location-node glass" style="padding: 40px; border-radius: 20px; border: 1px solid var(--border-color);">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px;">
+                    <h3 style="color: var(--primary); letter-spacing: 2px;">RAWALPINDI HUB</h3>
+                    <div class="status-indicator" style="border-color: var(--primary);">
+                        <div class="status-dot" style="background: var(--primary);"></div>
+                        <span style="font-size: 0.6rem; color: var(--primary);">PRIMARY_CORE</span>
+                    </div>
+                </div>
+                
+                <div class="area-list" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; color: var(--text-dim); font-size: 0.85rem;">
+                    <div style="padding: 10px; background: rgba(255,255,255,0.02); border-left: 2px solid var(--primary);">Chamanabad / Saddar</div>
+                    <div style="padding: 10px; background: rgba(255,255,255,0.02); border-left: 2px solid var(--primary);">Bahria Town (All Phases)</div>
+                    <div style="padding: 10px; background: rgba(255,255,255,0.02); border-left: 2px solid var(--primary);">DHA (Phase 1-5)</div>
+                    <div style="padding: 10px; background: rgba(255,255,255,0.02); border-left: 2px solid var(--primary);">Gulrez / Safari Villas</div>
+                    <div style="padding: 10px; background: rgba(255,255,255,0.02); border-left: 2px solid var(--primary);">Westridge / Peshawar Rd</div>
+                    <div style="padding: 10px; background: rgba(255,255,255,0.02); border-left: 2px solid var(--primary);">Askari (All Clusters)</div>
+                </div>
+                <p style="margin-top: 30px; font-size: 0.7rem; color: var(--primary); font-family: monospace;">[ DELIVERY_LATENCY: 30-45 MIN ]</p>
+            </div>
+
+            <div class="location-node glass" style="padding: 40px; border-radius: 20px; border: 1px solid var(--border-color);">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px;">
+                    <h3 style="color: #fff; letter-spacing: 2px;">ISLAMABAD NODE</h3>
+                    <div class="status-indicator" style="border-color: var(--text-dim);">
+                        <div class="status-dot" style="background: var(--text-dim);"></div>
+                        <span style="font-size: 0.6rem; color: var(--text-dim);">SAT_ACTIVE</span>
+                    </div>
+                </div>
+                
+                <div class="area-list" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; color: var(--text-dim); font-size: 0.85rem;">
+                    <div style="padding: 10px; background: rgba(255,255,255,0.02); border-left: 2px solid #fff;">Sector F-6 to F-11</div>
+                    <div style="padding: 10px; background: rgba(255,255,255,0.02); border-left: 2px solid #fff;">Sector G-6 to G-13</div>
+                    <div style="padding: 10px; background: rgba(255,255,255,0.02); border-left: 2px solid #fff;">Sector H & I (Full)</div>
+                    <div style="padding: 10px; background: rgba(255,255,255,0.02); border-left: 2px solid #fff;">E-7 / Blue Area</div>
+                    <div style="padding: 10px; background: rgba(255,255,255,0.02); border-left: 2px solid #fff;">Gulberg Green</div>
+                    <div style="padding: 10px; background: rgba(255,255,255,0.02); border-left: 2px solid #fff;">Park Enclave / Bani Gala</div>
+                </div>
+                <p style="margin-top: 30px; font-size: 0.7rem; color: var(--text-dim); font-family: monospace;">[ DELIVERY_LATENCY: 45-60 MIN ]</p>
+            </div>
+
+        </div>
+        </section>
+            <section class="logistics-map-section" style="padding: 100px 10%; border-top: 1px solid var(--border-color); background: #080808;">
+        <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: center;">
+            
+            <div class="schematic-map glass" style="height: 500px; border-radius: 30px; position: relative; overflow: hidden; background: #000; border: 1px solid var(--border-color);">
+                <div class="grid-overlay" style="position: absolute; inset: 0; background-image: radial-gradient(var(--border-color) 1px, transparent 1px); background-size: 40px 40px; opacity: 0.1;"></div>
+                
+                <div class="map-point" style="position: absolute; top: 60%; left: 40%;">
+                    <div class="pulse-active" style="width: 100px; height: 100px; border: 1px solid var(--primary); border-radius: 50%; opacity: 0.2;"></div>
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 10px; height: 10px; background: var(--primary); border-radius: 50%; box-shadow: 0 0 15px var(--primary);"></div>
+                    <span style="position: absolute; top: 20px; left: 20px; font-family: monospace; font-size: 0.6rem; color: var(--primary);">CORE_HUB: RWP</span>
+                </div>
+
+                <div class="map-point" style="position: absolute; top: 30%; left: 60%;">
+                    <div class="pulse-active" style="width: 80px; height: 80px; border: 1px solid #fff; border-radius: 50%; opacity: 0.2; animation-delay: 1s;"></div>
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 8px; height: 8px; background: #fff; border-radius: 50%;"></div>
+                    <span style="position: absolute; top: -20px; left: 10px; font-family: monospace; font-size: 0.6rem; color: #fff;">SAT_NODE: ISB</span>
+                </div>
+
+                <svg style="position: absolute; width: 100%; height: 100%; opacity: 0.2;">
+                    <line x1="40%" y1="60%" x2="60%" y2="30%" stroke="var(--primary)" stroke-width="1" stroke-dasharray="5,5" />
+                </svg>
+
+                <div style="position: absolute; bottom: 30px; left: 30px; font-family: monospace; font-size: 0.6rem; color: var(--text-dim);">
+                    PROTO_MAP_V6: RAWALPINDI / ISLAMABAD / BAHRIA / DHA
+                </div>
+            </div>
+
+            <div class="protocol-info">
+                <h3 style="color: var(--primary); letter-spacing: 2px; margin-bottom: 30px;">AMANATDARI DELIVERY FLOW</h3>
+                <div class="protocol-steps" style="display: grid; gap: 30px;">
+                    <div style="display: flex; gap: 20px;">
+                        <div style="font-family: monospace; color: var(--primary); font-weight: 900;">[01]</div>
+                        <p style="font-size: 0.85rem; color: var(--text-dim); line-height: 1.6;">
+                            <strong style="color: #fff;">Verification:</strong> Request is logged and staff/machine availability is confirmed from the central inventory node.
+                        </p>
+                    </div>
+                    <div style="display: flex; gap: 20px;">
+                        <div style="font-family: monospace; color: var(--primary); font-weight: 900;">[02]</div>
+                        <p style="font-size: 0.85rem; color: var(--text-dim); line-height: 1.6;">
+                            <strong style="color: #fff;">Sterilization:</strong> Equipment undergoes final UV-C wipe-down before being loaded into our specialized medical transport.
+                        </p>
+                    </div>
+                    <div style="display: flex; gap: 20px;">
+                        <div style="font-family: monospace; color: var(--primary); font-weight: 900;">[03]</div>
+                        <p style="font-size: 0.85rem; color: var(--text-dim); line-height: 1.6;">
+                            <strong style="color: #fff;">Deployment:</strong> Our team arrives at your location (ISB/RWP) within the guaranteed 45-60 minute window for setup.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+            </section>
+                <section class="hub-details" style="padding: 100px 10%; background: #050505; border-top: 1px solid var(--border-color);">
+        <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px;">
+            
+            <div class="hub-address glass" style="padding: 40px; border-radius: 20px; border: 1px solid var(--border-color);">
+                <h3 style="color: var(--primary); letter-spacing: 2px; margin-bottom: 25px;">RAWALPINDI HUB [HQ]</h3>
+                <div style="margin-bottom: 30px;">
+                    <span style="font-size: 0.7rem; color: var(--text-dim); display: block; font-family: monospace; margin-bottom: 5px;">LOCATION_COORDINATES</span>
+                    <p style="color: #fff; font-size: 1.1rem; line-height: 1.5;">
+                        Chamanabad Area, Rawalpindi,<br>
+                        Punjab, Pakistan.
+                    </p>
+                </div>
+                <div style="margin-bottom: 30px;">
+                    <span style="font-size: 0.7rem; color: var(--text-dim); display: block; font-family: monospace; margin-bottom: 5px;">PRIMARY_HOTLINE</span>
+                    <p style="color: var(--primary); font-size: 1.5rem; font-weight: 900;">0312 5166507</p>
+                </div>
+                <div style="padding: 15px; background: rgba(0,255,136,0.05); border: 1px dashed var(--primary); font-size: 0.75rem; color: var(--primary);">
+                    NOTICE: Our warehouse is open 24/7 for emergency cylinder refills and equipment pickup.
+                </div>
+            </div>
+
+            <div class="external-support">
+                <div class="status-indicator" style="margin-bottom: 20px;">
+                    <div class="status-dot"></div>
+                    <span style="letter-spacing: 2px;">EXTENDED_REACH_PROTOCOL</span>
+                </div>
+                <h2 style="color: #fff; font-size: 2.2rem; margin-bottom: 20px;">OUT-OF-ZONE SERVICES</h2>
+                <p style="color: var(--text-dim); line-height: 1.8; margin-bottom: 30px;">
+                    Twin cities ke bahar ke ilaqon (e.g., Taxila, Wah Cantt, Gujar Khan, Fateh Jang) ke liye hum specialized long-distance dispatch service provide karte hain.
+                </p>
+                
+                <div class="policy-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                    <div class="policy-item">
+                        <h4 style="color: #fff; font-size: 0.9rem; margin-bottom: 10px;">TRANSPORTATION</h4>
+                        <p style="font-size: 0.8rem; color: var(--text-dim);">Extra fuel/logistics charges apply based on mileage from Chamanabad Hub.</p>
+                    </div>
+                    <div class="policy-item">
+                        <h4 style="color: #fff; font-size: 0.9rem; margin-bottom: 10px;">SETUP TIME</h4>
+                        <p style="font-size: 0.8rem; color: var(--text-dim);">Guaranteed arrival window of 2-3 hours for extended zones.</p>
+                    </div>
+                    <div class="policy-item">
+                        <h4 style="color: #fff; font-size: 0.9rem; margin-bottom: 10px;">NURSING DEPLOYMENT</h4>
+                        <p style="font-size: 0.8rem; color: var(--text-dim);">Residential nursing staff available for weekly/monthly shifts only.</p>
+                    </div>
+                    <div class="policy-item">
+                        <h4 style="color: #fff; font-size: 0.9rem; margin-bottom: 10px;">SUPPORT</h4>
+                        <p style="font-size: 0.8rem; color: var(--text-dim);">24/7 remote technical support for machine troubleshooting.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+                </section>
+                    <footer style="padding: 100px 10% 40px; border-top: 1px solid var(--border-color); background: #050505; position: relative;">
+        <div class="system-seal" style="position: absolute; top: -30px; right: 10%; width: 120px; height: 120px; border: 1px dashed var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0.3; transform: rotate(-15deg);">
+            <div style="color: var(--primary); font-size: 0.6rem; font-family: monospace; text-align: center; letter-spacing: 1px;">
+                VERIFIED BY<br>MALIK AWAIS<br>BABAR
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 60px;">
+            <div class="footer-brand">
+                <div class="logo" style="margin-bottom: 20px;">
+                    <div class="plus-icon"></div>
+                    <span style="font-size: 1.5rem; font-weight: 900; letter-spacing: 2px;">AR NURSING</span>
+                </div>
+                <p style="opacity: 0.5; max-width: 400px; line-height: 1.8; font-size: 0.85rem;">
+                    Service Coverage Node: Ensuring critical care accessibility across the twin cities. Managed with 100% native logic and hardware optimization.
+                </p>
+            </div>
+            
+            <div class="footer-links">
+                <h4 style="color: var(--primary); margin-bottom: 25px; font-size: 0.8rem; letter-spacing: 1px;">NODES</h4>
+                <ul style="list-style: none; padding: 0; line-height: 2.5; font-size: 0.85rem;">
+                    <li><a href="home.html" style="color: var(--text-dim); text-decoration: none;">Primary Home</a></li>
+                    <li><a href="inventory.html" style="color: var(--text-dim); text-decoration: none;">Global Inventory</a></li>
+                    <li><a href="contact.html" style="color: var(--text-dim); text-decoration: none;">Contact Hub</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4 style="color: var(--primary); margin-bottom: 25px; font-size: 0.8rem; letter-spacing: 1px;">HOTLINE</h4>
+                <p style="color: #fff; font-weight: 700; font-size: 1.1rem;">0312 5166507</p>
+                <p style="color: var(--text-dim); font-size: 0.75rem;">Active Response Unit</p>
+                <div style="margin-top: 15px; font-size: 0.6rem; color: #ff4444; font-family: monospace;">[ COORDINATES_LOCKED ]</div>
+            </div>
+        </div>
+
+        <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; font-size: 0.7rem; color: var(--text-dim); letter-spacing: 2px;">
+            <span>© 2026 AR COVERAGE | POWERED BY TECHFIXER</span>
+            <span>RWP_HUB: CHAMANABAD | ISB_NODE: ACTIVE</span>
+        </div>
+    </footer>
+
+    <script src="ui-effects.js"></script>
+    <script src="app.js"></script>
+
+    <script>
+        // Protocol: Silent Location Sync
+        window.addEventListener('load', () => {
+            console.log("AR-Protocol: Geographic Nodes Synchronized.");
+            
+            // Industrial Reveal Effect for Zone Cards
+            const cards = document.querySelectorAll('.location-node');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 200 * index);
+            });
+        });
+    </script>
+
+</body>
+</html>
