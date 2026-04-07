@@ -308,3 +308,57 @@ ARApp.run();
  * LINE DENSITY: Machine-Ready
  * ASSET-FREE: Yes
  */
+// AR-PROTOCOL: UNIVERSAL NAV INJECTOR
+document.addEventListener("DOMContentLoaded", () => {
+    const navHTML = `
+        <div class="logo">
+            <div class="plus-icon"></div>
+            <span>AR NURSING</span>
+        </div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="proc-icu.html">ICU SOP</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="mobile-menu-trigger" onclick="toggleMobileMenu()" style="display:none; cursor:pointer;">
+            <div style="width:25px; height:2px; background:#fff; margin:5px 0;"></div>
+            <div style="width:25px; height:2px; background:#fff; margin:5px 0;"></div>
+        </div>
+        <a href="tel:03125166507" class="primary-btn nav-cta">0312 5166507</a>
+    `;
+
+    const navElement = document.querySelector('.nav-bar');
+    if (navElement) {
+        navElement.innerHTML = navHTML;
+    }
+
+    // Mobile specific logic
+    if (window.innerWidth < 768) {
+        const trigger = document.querySelector('.mobile-menu-trigger');
+        const links = document.querySelector('.nav-links');
+        const cta = document.querySelector('.nav-cta');
+        
+        if(trigger) trigger.style.display = 'block';
+        if(cta) cta.style.fontSize = '0.7rem';
+    }
+});
+
+// Toggle Function
+function toggleMobileMenu() {
+    const links = document.querySelector('.nav-links');
+    if (links.style.display === 'flex') {
+        links.style.display = 'none';
+    } else {
+        links.style.display = 'flex';
+        links.style.flexDirection = 'column';
+        links.style.position = 'absolute';
+        links.style.top = '70px';
+        links.style.left = '0';
+        links.style.width = '100%';
+        links.style.background = '#0a0a0a';
+        links.style.padding = '20px';
+        links.style.borderBottom = '1px solid var(--primary)';
+    }
+}
