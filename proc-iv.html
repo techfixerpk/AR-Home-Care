@@ -1,1 +1,279 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IV & Injectable Protocol | AR (Active Response) Nursing</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* IV Protocol Specific Styles */
+        .iv-hero {
+            padding: 160px 10% 60px;
+            background: radial-gradient(circle at bottom left, rgba(0, 150, 255, 0.05), transparent);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .iv-drip-anim {
+            width: 2px;
+            height: 20px;
+            background: var(--primary);
+            position: absolute;
+            animation: drip 2s infinite;
+        }
+        @keyframes drip {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(100px); opacity: 0; }
+        }
+    </style>
+</head>
+<body class="ar-protocol-bg">
+
+    <nav class="nav-bar glass">
+        <div class="logo">
+            <div class="plus-icon"></div>
+            <span>AR NURSING</span>
+        </div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="proc-iv.html" class="active">IV Protocol</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <button class="primary-btn emergency-trigger">0312 5166507</button>
+    </nav>
+
+    <section class="iv-hero">
+        <div class="hero-content">
+            <div class="status-indicator" style="margin-bottom: 20px; border-color: var(--primary);">
+                <div class="status-dot" style="background: var(--primary);"></div>
+                <span style="color: var(--primary); letter-spacing: 2px;">CLINICAL_IV_SOP_V6</span>
+            </div>
+            <h1 class="glitch-text" data-text="IV THERAPY NODE">IV THERAPY NODE</h1>
+            <p class="subtitle" style="max-width: 700px;">Professional Intravenous management at home. From antibiotic infusions to fluid resuscitation, we follow strict aseptic techniques for patient safety.</p>
+            
+            <div class="clinical-tags" style="display: flex; gap: 20px; margin-top: 30px;">
+                <span style="padding: 5px 15px; border: 1px solid var(--border-color); font-size: 0.7rem; color: var(--text-dim); font-family: monospace;">[ ASEPTIC_LOCKED ]</span>
+                <span style="padding: 5px 15px; border: 1px solid var(--border-color); font-size: 0.7rem; color: var(--text-dim); font-family: monospace;">[ CANNULA_CARE_ACTIVE ]</span>
+                <span style="padding: 5px 15px; border: 1px solid var(--border-color); font-size: 0.7rem; color: var(--text-dim); font-family: monospace;">[ PH_BALANCE_VERIFIED ]</span>
+            </div>
+        </div>
+    </section>
+        <section class="sop-phase" style="padding: 100px 10%; background: #050505; border-top: 1px solid var(--border-color);">
+        <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: center;">
+            
+            <div class="sop-text" style="position: relative;">
+                <div class="step-number" style="font-family: monospace; font-size: 4rem; font-weight: 900; color: rgba(0, 150, 255, 0.05); position: absolute; top: -20px; right: 20px;">01</div>
+                <h3 style="color: var(--primary); letter-spacing: 2px; margin-bottom: 20px;">PHASE_01: CLINICAL_LOCK</h3>
+                <h2 style="color: #fff; font-size: 2.2rem; margin-bottom: 25px;">VERIFICATION & HYGIENE</h2>
+                <p style="color: var(--text-dim); line-height: 1.8; margin-bottom: 30px;">
+                    Dawa lagane se pehle hamara nursing staff doctor ki prescription ko "Amanatdari Protocol" ke mutabiq verify karta hai. Expired ya ghalat dose ka koi imkan nahi chora jata.
+                </p>
+
+                <div class="check-list" style="display: grid; gap: 15px;">
+                    <div style="padding: 15px; border-left: 3px solid var(--primary); background: rgba(0, 150, 255, 0.02);">
+                        <strong style="color: #fff; display: block;">Prescription Audit:</strong> Double-checking the drug name, dosage, and frequency against the physician's signed note.
+                    </div>
+                    <div style="padding: 15px; border-left: 3px solid var(--primary); background: rgba(0, 150, 255, 0.02);">
+                        <strong style="color: #fff; display: block;">Aseptic Hand-Wash:</strong> Strict WHO-standard hand hygiene protocol before touching any clinical supplies.
+                    </div>
+                    <div style="padding: 15px; border-left: 3px solid var(--primary); background: rgba(0, 150, 255, 0.02);">
+                        <strong style="color: #fff; display: block;">Sterile Field:</strong> Creating a "Clean Zone" at the patient's bedside for all IV components (Cannulas, Syringes, Fluids).
+                    </div>
+                </div>
+            </div>
+
+            <div class="visual-box glass" style="padding: 40px; border-radius: 20px; text-align: center; border: 1px dashed var(--border-color); position: relative;">
+                <div class="iv-drip-container" style="height: 150px; width: 60px; border: 1px solid var(--border-color); margin: 0 auto 30px; border-radius: 0 0 30px 30px; position: relative; overflow: hidden;">
+                    <div class="fluid-fill" style="position: absolute; bottom: 0; width: 100%; height: 70%; background: rgba(0, 150, 255, 0.2); animation: fluid-bounce 3s infinite ease-in-out;"></div>
+                    <div class="iv-drip-anim" style="left: 50%; transform: translateX(-50%);"></div>
+                </div>
+                <h4 style="color: var(--primary); font-size: 0.8rem; letter-spacing: 3px; margin-bottom: 10px;">FLUID_INTEGRITY_CHECK</h4>
+                <p style="font-size: 0.7rem; color: var(--text-dim); font-family: monospace;">
+                    BATCH_SERIAL: AR_IV_782<br>
+                    STERILE_SEAL: [LOCKED]
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <style>
+        @keyframes fluid-bounce {
+            0%, 100% { height: 70%; }
+            50% { height: 75%; }
+        }
+    </style>
+        <section class="sop-phase" style="padding: 100px 10%; background: #080808; border-top: 1px solid var(--border-color);">
+        <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: center;">
+            
+            <div class="flow-monitor glass" style="height: 350px; border-radius: 20px; position: relative; border: 1px solid var(--border-color); background: #000; overflow: hidden;">
+                <div class="grid-overlay" style="position: absolute; inset: 0; background-image: linear-gradient(var(--border-color) 1px, transparent 1px), linear-gradient(90deg, var(--border-color) 1px, transparent 1px); background-size: 30px 30px; opacity: 0.05;"></div>
+                
+                <svg width="100%" height="100%" style="position: absolute; top: 0; left: 0;">
+                    <path d="M0 175 L100 175 L120 100 L140 250 L160 175 L300 175" stroke="var(--primary)" fill="transparent" stroke-width="2" class="pulse-line" />
+                </svg>
+
+                <div style="position: absolute; top: 30px; left: 30px; font-family: monospace; font-size: 0.7rem; color: var(--primary);">
+                    REALTIME_FLOW: 60_DROPS/MIN<br>
+                    PRESSURE_STABILITY: [NORMAL]
+                </div>
+            </div>
+
+            <div class="sop-text" style="position: relative;">
+                <div class="step-number" style="font-family: monospace; font-size: 4rem; font-weight: 900; color: rgba(0, 150, 255, 0.05); position: absolute; top: -20px; right: 20px;">02</div>
+                <h3 style="color: var(--primary); letter-spacing: 2px; margin-bottom: 20px;">PHASE_02: DEPLOYMENT</h3>
+                <h2 style="color: #fff; font-size: 2.2rem; margin-bottom: 25px;">PRECISION INSERTION</h2>
+                <p style="color: var(--text-dim); line-height: 1.8; margin-bottom: 30px;">
+                    Hamara staff expert phlebotomists par mushtamil hai jo kam se kam dard ke saath cannula insert karte hain. Insertion ke baad drip ka flow rate doctor ki hidayat ke mutabiq set kiya jata hai.
+                </p>
+
+                <div class="check-list" style="display: grid; gap: 15px;">
+                    <div style="padding: 15px; border-left: 3px solid var(--primary); background: rgba(0, 150, 255, 0.02);">
+                        <strong style="color: #fff; display: block;">Vein Mapping:</strong> Professional assessment to find the most stable and comfortable site for the cannula.
+                    </div>
+                    <div style="padding: 15px; border-left: 3px solid var(--primary); background: rgba(0, 150, 255, 0.02);">
+                        <strong style="color: #fff; display: block;">Flow Optimization:</strong> Manual or pump-based regulation to ensure medicine enters the bloodstream at the correct velocity.
+                    </div>
+                    <div style="padding: 15px; border-left: 3px solid var(--primary); background: rgba(0, 150, 255, 0.02);">
+                        <strong style="color: #fff; display: block;">Site Dressing:</strong> Using high-quality transparent dressings to monitor for any redness or swelling (Phlebitis check).
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <style>
+        .pulse-line {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: dash 4s linear infinite;
+        }
+        @keyframes dash {
+            to { stroke-dashoffset: 0; }
+        }
+    </style>
+        <section class="sop-phase" style="padding: 100px 10%; background: #050505; border-top: 1px solid var(--border-color);">
+        <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: center;">
+            
+            <div class="sop-text" style="position: relative;">
+                <div class="step-number" style="font-family: monospace; font-size: 4rem; font-weight: 900; color: rgba(0, 150, 255, 0.05); position: absolute; top: -20px; right: 20px;">03</div>
+                <h3 style="color: var(--primary); letter-spacing: 2px; margin-bottom: 20px;">PHASE_03: CLINICAL_VIGILANCE</h3>
+                <h2 style="color: #fff; font-size: 2.2rem; margin-bottom: 25px;">REACTION MONITORING</h2>
+                <p style="color: var(--text-dim); line-height: 1.8; margin-bottom: 30px;">
+                    Infusion ke douran hamara staff patient ke vitals (BP, Pulse, Temperature) aur injection site ko musalsal monitor karta hai. Kisi bhi "Adverse Event" ki surat mein hamara protocol fori stop-and-report activation hai.
+                </p>
+
+                <div class="check-list" style="display: grid; gap: 15px;">
+                    <div style="padding: 15px; border-left: 3px solid #ff4444; background: rgba(255, 68, 68, 0.02);">
+                        <strong style="color: #fff; display: block;">Anaphylaxis Watch:</strong> Immediate detection of allergic signs like itching, rashes, or breathing difficulty.
+                    </div>
+                    <div style="padding: 15px; border-left: 3px solid #ff4444; background: rgba(255, 68, 68, 0.02);">
+                        <strong style="color: #fff; display: block;">Site Integrity:</strong> Checking for infiltration (fluid leaking into tissue) or phlebitis (vein inflammation).
+                    </div>
+                    <div style="padding: 15px; border-left: 3px solid #ff4444; background: rgba(255, 68, 68, 0.02);">
+                        <strong style="color: #fff; display: block;">Emergency Reversal:</strong> Nursing staff is trained to stop infusion immediately and contact the primary physician if vitals fluctuate.
+                    </div>
+                </div>
+            </div>
+
+            <div class="reaction-unit glass" style="padding: 50px; border-radius: 20px; border: 1px solid #ff4444; background: rgba(255, 68, 68, 0.02); text-align: center;">
+                <div style="margin-bottom: 20px; font-family: monospace; color: #ff4444; font-size: 0.7rem; letter-spacing: 2px;">[ REACTION_CODE_RED ]</div>
+                <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 15px;">IMMEDIATE RESPONSE</h3>
+                <p style="color: var(--text-dim); font-size: 0.85rem; margin-bottom: 30px;">In case of any patient discomfort, infusion is halted and medical lead is notified instantly.</p>
+                <div style="padding: 20px; border: 1px dashed #ff4444; display: inline-block; color: #ff4444; font-weight: 700;">
+                    SOP: STOP_INFUSE -> STABILIZE -> REPORT
+                </div>
+                <div style="margin-top: 30px; font-size: 0.6rem; color: var(--text-dim); font-family: monospace;">
+                    HOTLINE_SYNCED: 0312 5166507
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div style="padding: 40px 10%; background: #000; text-align: center; border-top: 1px solid var(--border-color);">
+        <p style="font-size: 0.8rem; color: var(--text-dim); max-width: 800px; margin: 0 auto; letter-spacing: 1px;">
+            <strong style="color: var(--primary);">Note:</strong> We strictly follow the Five Rights of Medication Administration: Right Patient, Right Drug, Right Dose, Right Route, and Right Time.
+        </p>
+    </div>
+        <footer style="padding: 100px 10% 40px; border-top: 1px solid var(--border-color); background: #050505; position: relative; overflow: hidden;">
+        <div class="system-seal" style="position: absolute; top: -30px; right: 10%; width: 140px; height: 140px; border: 1px dashed var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0.2; transform: rotate(15deg);">
+            <div style="color: var(--primary); font-size: 0.6rem; font-family: monospace; text-align: center; letter-spacing: 1px;">
+                IV_SOP_LOCKED<br>BY MALIK AWAIS<br>BABAR
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 60px;">
+            <div class="footer-brand">
+                <div class="logo" style="margin-bottom: 25px;">
+                    <div class="plus-icon"></div>
+                    <span style="font-size: 1.5rem; font-weight: 900; letter-spacing: 2px;">AR NURSING</span>
+                </div>
+                <p style="opacity: 0.5; max-width: 350px; line-height: 1.8; font-size: 0.85rem;">
+                    Clinical IV Protocol Node: Standardizing injectable care across Rawalpindi & Islamabad. Every infusion is a commitment to safety and transparency.
+                </p>
+            </div>
+
+            <div class="footer-nav">
+                <h4 style="color: var(--primary); margin-bottom: 25px; font-size: 0.8rem; letter-spacing: 2px;">PROCEDURES</h4>
+                <ul style="list-style: none; padding: 0; line-height: 2.5; font-size: 0.85rem;">
+                    <li><a href="proc-icu.html" style="color: var(--text-dim); text-decoration: none;">ICU Deployment</a></li>
+                    <li><a href="services.html" style="color: var(--text-dim); text-decoration: none;">General Nursing</a></li>
+                    <li><a href="inventory.html" style="color: var(--text-dim); text-decoration: none;">Clinical Supplies</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-dispatch">
+                <h4 style="color: var(--primary); margin-bottom: 25px; font-size: 0.8rem; letter-spacing: 2px;">CLINICAL_LEAD</h4>
+                <p style="color: #fff; font-weight: 700; font-size: 1.1rem; margin-bottom: 5px;">0312 5166507</p>
+                <p style="color: var(--text-dim); font-size: 0.75rem;">Malik Awais Babar</p>
+                <div style="margin-top: 20px; font-size: 0.6rem; color: #0096ff; font-family: monospace;">
+                    [ STATUS: ASEPTIC_SECURE ]
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; font-size: 0.7rem; color: var(--text-dim); letter-spacing: 2px;">
+            <span>© 2026 AR CLINICAL | POWERED BY TECHFIXER</span>
+            <div style="display: flex; gap: 20px;">
+                <span>STRICT_SOP_V6</span>
+                <span>OPTIMIZED_LOW_END</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="ui-effects.js"></script>
+    <script src="app.js"></script>
+
+    <script>
+        // Protocol: Pulse Interaction on Load
+        window.addEventListener('load', () => {
+            console.log("AR-Protocol: IV Clinical Nodes Synchronized.");
+            
+            // Industrial Fade-in for SOP Phases
+            const phases = document.querySelectorAll('.sop-phase');
+            phases.forEach((phase, index) => {
+                phase.style.opacity = '0';
+                phase.style.transform = 'translateY(30px)';
+                phase.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+                
+                setTimeout(() => {
+                    phase.style.opacity = '1';
+                    phase.style.transform = 'translateY(0)';
+                }, 400 * index);
+            });
+        });
+
+        // Flow Monitor Pulse
+        const pulseLine = document.querySelector('.pulse-line');
+        if(pulseLine) {
+            setInterval(() => {
+                pulseLine.style.opacity = '0.5';
+                setTimeout(() => pulseLine.style.opacity = '1', 100);
+            }, 1000);
+        }
+    </script>
+
+</body>
+</html>
