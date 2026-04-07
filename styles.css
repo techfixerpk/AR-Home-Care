@@ -628,3 +628,44 @@ nav {
 .h-stack { display: flex; align-items: center; gap: 15px; }
 
 /* PROTOCOL END: 600 LINE DENSITY LOCK */
+/* MOBILE OPTIMIZATION NODE [V6.0] */
+@media (max-width: 768px) {
+    /* Container Padding Adjustments */
+    section, footer, nav {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+
+    /* Grid to Stack Conversion */
+    div[style*="display: grid"] {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    /* Typography Scaling */
+    h1 { font-size: 2.2rem !important; }
+    h2 { font-size: 1.8rem !important; }
+    p { font-size: 0.9rem !important; }
+
+    /* Nav Bar Mobile Fix */
+    .nav-bar {
+        padding: 15px 5% !important;
+        justify-content: space-between !important;
+    }
+    
+    .nav-links {
+        display: none; /* We will inject a mobile menu via JS */
+    }
+
+    /* Hero Section Fixes */
+    div[style*="padding: 160px"] {
+        padding-top: 100px !important;
+        padding-bottom: 40px !important;
+    }
+
+    /* Image/Visual Scaling */
+    div[style*="width: 120px"], .system-seal {
+        transform: scale(0.7) !important;
+        right: 0 !important;
+    }
+}
