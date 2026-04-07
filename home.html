@@ -1,1 +1,329 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | AR (Active Response) Nursing Home Care</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Home-Specific Full Height Hero */
+        .home-hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            background: radial-gradient(circle at center, rgba(0, 255, 136, 0.05) 0%, transparent 70%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-bg-text {
+            position: absolute;
+            font-size: 20vw;
+            font-weight: 900;
+            color: rgba(255,255,255,0.02);
+            z-index: -1;
+            white-space: nowrap;
+            user-select: none;
+        }
+    </style>
+</head>
+<body class="ar-protocol-bg">
+
+    <nav class="nav-bar glass">
+        <div class="logo">
+            <div class="plus-icon"></div>
+            <span>AR NURSING</span>
+        </div>
+        <div class="nav-links">
+            <a href="home.html" class="active">Home</a>
+            <a href="equip-resp.html">Respiratory</a>
+            <a href="equip-mobility.html">Mobility</a>
+            <a href="services.html">Nursing</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <button class="primary-btn emergency-trigger" onclick="location.href='tel:03125166507'">EMERGENCY</button>
+    </nav>
+
+    <section class="home-hero">
+        <div class="hero-bg-text">ACTIVE RESPONSE</div>
+        <div class="hero-content" style="max-width: 800px;">
+            <div class="status-indicator" style="margin-bottom: 20px;">
+                <div class="status-dot"></div>
+                <span style="letter-spacing: 3px;">SYSTEM STATUS: OPERATIONAL</span>
+            </div>
+            <h1 class="glitch-text" data-text="ICU CARE AT HOME" style="font-size: 4.5rem; line-height: 1;">ICU CARE AT HOME</h1>
+            <p class="subtitle" style="font-size: 1.2rem; margin: 30px 0; max-width: 600px; opacity: 0.8;">
+                High-precision medical equipment rental and expert nursing staff in Rawalpindi & Islamabad. Managed with the integrity of Amanatdari.
+            </p>
+            <div class="hero-btns" style="display: flex; gap: 20px;">
+                <a href="contact.html" class="primary-btn" style="text-decoration: none; padding: 15px 40px;">BOOK SERVICE</a>
+                <a href="equip-resp.html" class="secondary-btn" style="text-decoration: none; padding: 15px 40px;">VIEW EQUIPMENT</a>
+            </div>
+        </div>
+    </section>
+        <section class="service-nodes" style="padding: 100px 10%; background: #050505; border-top: 1px solid var(--border-color);">
+        <div class="section-header" style="margin-bottom: 60px; text-align: center;">
+            <h2 style="color: var(--primary); letter-spacing: 4px; font-size: 0.9rem; text-transform: uppercase;">Service Architecture</h2>
+            <p style="font-size: 2rem; color: #fff; font-weight: 700; margin-top: 10px;">DIRECT ACCESS PROTOCOLS</p>
+        </div>
+
+        <div class="ar-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+            
+            <div class="item-card reveal-active" style="border: 1px solid var(--border-color); background: rgba(255,255,255,0.02); transition: 0.4s;">
+                <div class="card-icon" style="margin-bottom: 25px;">
+                    <div class="plus-icon" style="background: var(--primary); width: 30px; height: 30px;"></div>
+                </div>
+                <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 15px;">RESPIRATORY CARE</h3>
+                <p style="color: var(--text-dim); font-size: 0.9rem; line-height: 1.6; margin-bottom: 25px;">
+                    High-purity Oxygen Concentrators (5L/10L), BiPAP, and CPAP machines with emergency cylinder backup.
+                </p>
+                <div class="spec-grid" style="margin-bottom: 30px;">
+                    <span class="spec-pill">Oxygen</span>
+                    <span class="spec-pill">BiPAP</span>
+                    <span class="spec-pill">CPAP</span>
+                </div>
+                <a href="equip-resp.html" class="secondary-btn" style="display: block; text-align: center; text-decoration: none;">ENTER NODE</a>
+            </div>
+
+            <div class="item-card reveal-active" style="border: 1px solid var(--border-color); background: rgba(255,255,255,0.02); transition: 0.4s;">
+                <div class="card-icon" style="margin-bottom: 25px;">
+                    <div class="plus-icon" style="background: var(--primary); width: 30px; height: 30px;"></div>
+                </div>
+                <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 15px;">PATIENT MOBILITY</h3>
+                <p style="color: var(--text-dim); font-size: 0.9rem; line-height: 1.6; margin-bottom: 25px;">
+                    Manual & Electric Hospital Beds, Orthopedic Air Mattresses, and specialized Wheelchairs for recovery.
+                </p>
+                <div class="spec-grid" style="margin-bottom: 30px;">
+                    <span class="spec-pill">ICU Beds</span>
+                    <span class="spec-pill">Air Mattress</span>
+                    <span class="spec-pill">Manual</span>
+                </div>
+                <a href="equip-mobility.html" class="secondary-btn" style="display: block; text-align: center; text-decoration: none;">ENTER NODE</a>
+            </div>
+
+            <div class="item-card reveal-active" style="border: 1px solid var(--border-color); background: rgba(255,255,255,0.02); transition: 0.4s;">
+                <div class="card-icon" style="margin-bottom: 25px;">
+                    <div class="plus-icon" style="background: var(--primary); width: 30px; height: 30px;"></div>
+                </div>
+                <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 15px;">NURSING STAFF</h3>
+                <p style="color: var(--text-dim); font-size: 0.9rem; line-height: 1.6; margin-bottom: 25px;">
+                    Qualified ICU-trained nurses, general home nursing care, and professional physiotherapy sessions.
+                </p>
+                <div class="spec-grid" style="margin-bottom: 30px;">
+                    <span class="spec-pill">ICU Trained</span>
+                    <span class="spec-pill">24/7 Care</span>
+                    <span class="spec-pill">Physio</span>
+                </div>
+                <a href="services.html" class="secondary-btn" style="display: block; text-align: center; text-decoration: none;">ENTER NODE</a>
+            </div>
+
+        </div>
+        </section>
+            <section class="integrity-panel" style="padding: 100px 10%; border-top: 1px solid var(--border-color); background: var(--surface-dark);">
+        <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: center;">
+            
+            <div class="integrity-content">
+                <div class="status-indicator" style="margin-bottom: 20px; border-color: var(--primary);">
+                    <div class="status-dot" style="background: var(--primary);"></div>
+                    <span style="color: var(--primary); letter-spacing: 2px;">CORE PRINCIPLE: AMANATDARI</span>
+                </div>
+                <h2 style="color: #fff; font-size: 2.5rem; margin-bottom: 20px;">TRANSPARENT CARE PROTOCOL</h2>
+                <p style="color: var(--text-dim); line-height: 1.8; margin-bottom: 30px;">
+                    Humara model "Zero-Hidden Cost" aur "Full Transparency" par mabni hai. Har machine ka maintenance log aur har nurse ki professional verification aapke samne hoti hai.
+                </p>
+                
+                <div class="integrity-features" style="display: grid; gap: 15px;">
+                    <div style="padding: 15px; border-left: 3px solid var(--primary); background: rgba(0, 255, 136, 0.03);">
+                        <strong style="color: #fff; display: block;">Machine Integrity:</strong> 100% Sterilized & Tech-Checked gear.
+                    </div>
+                    <div style="padding: 15px; border-left: 3px solid var(--primary); background: rgba(0, 255, 136, 0.03);">
+                        <strong style="color: #fff; display: block;">Financial Clarity:</strong> No advance booking fees for emergency O2.
+                    </div>
+                    <div style="padding: 15px; border-left: 3px solid var(--primary); background: rgba(0, 255, 136, 0.03);">
+                        <strong style="color: #fff; display: block;">Human Factor:</strong> Verified staff with specialized ICU training.
+                    </div>
+                </div>
+            </div>
+
+            <div class="response-tracker glass" style="padding: 50px; border-radius: 20px; position: relative; overflow: hidden; background: #000;">
+                <div class="grid-overlay" style="position: absolute; inset: 0; background-image: radial-gradient(var(--border-color) 1px, transparent 1px); background-size: 20px 20px; opacity: 0.1;"></div>
+                
+                <h4 style="color: var(--primary); font-size: 0.8rem; letter-spacing: 3px; text-align: center; margin-bottom: 40px;">LIVE RESPONSE METRICS</h4>
+                
+                <div class="metrics-grid" style="display: grid; gap: 30px;">
+                    <div class="metric-item">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-family: monospace; font-size: 0.7rem;">
+                            <span>O2_DISPATCH_LATENCY</span>
+                            <span style="color: var(--primary);">45 MIN AVG</span>
+                        </div>
+                        <div style="height: 4px; background: rgba(255,255,255,0.05); border-radius: 2px;">
+                            <div style="width: 85%; height: 100%; background: var(--primary); box-shadow: 0 0 10px var(--primary);"></div>
+                        </div>
+                    </div>
+
+                    <div class="metric-item">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-family: monospace; font-size: 0.7rem;">
+                            <span>STAFF_READY_RESERVE</span>
+                            <span style="color: var(--primary);">92% ACTIVE</span>
+                        </div>
+                        <div style="height: 4px; background: rgba(255,255,255,0.05); border-radius: 2px;">
+                            <div style="width: 92%; height: 100%; background: var(--primary); box-shadow: 0 0 10px var(--primary);"></div>
+                        </div>
+                    </div>
+
+                    <div class="metric-item">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-family: monospace; font-size: 0.7rem;">
+                            <span>GEOGRAPHIC_LOCK (ISB/RWP)</span>
+                            <span style="color: var(--primary);">OPTIMIZED</span>
+                        </div>
+                        <div style="height: 4px; background: rgba(255,255,255,0.05); border-radius: 2px;">
+                            <div style="width: 100%; height: 100%; background: var(--primary); box-shadow: 0 0 10px var(--primary);"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 40px; text-align: center; color: var(--text-dim); font-size: 0.6rem; font-family: monospace; opacity: 0.5;">
+                    SYSTEM TIMESTAMP: 2026_PROTOCOL_V6
+                </div>
+            </div>
+
+        </div>
+            </section>
+                <section class="booking-trust-section" style="padding: 100px 10%; border-top: 1px solid var(--border-color); background: #0a0a0a;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: flex-start;">
+            
+            <div class="booking-unit glass" style="padding: 40px; border-radius: 20px; border: 1px solid var(--border-color);">
+                <h3 style="color: var(--primary); margin-bottom: 25px; letter-spacing: 2px;">EXPRESS REQUEST</h3>
+                <p style="color: var(--text-dim); font-size: 0.85rem; margin-bottom: 30px;">For immediate dispatch, enter your contact details. Our coordination lead will call back in 5 minutes.</p>
+                
+                <form id="home_express_form" style="display: grid; gap: 20px;">
+                    <div class="input-group">
+                        <input type="text" placeholder="Patient Name" style="width: 100%; padding: 15px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); color: #fff; border-radius: 5px;">
+                    </div>
+                    <div class="input-group">
+                        <input type="tel" placeholder="Phone Number (e.g., 03xx-xxxxxxx)" style="width: 100%; padding: 15px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); color: #fff; border-radius: 5px;">
+                    </div>
+                    <div class="input-group">
+                        <select style="width: 100%; padding: 15px; background: #000; border: 1px solid var(--border-color); color: #fff; border-radius: 5px;">
+                            <option value="oxygen">Oxygen / Respiratory</option>
+                            <option value="bed">Hospital Bed / Mobility</option>
+                            <option value="nurse">Nursing Staff</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="primary-btn" style="width: 100%; padding: 15px; cursor: pointer;">SUBMIT EXPRESS REQUEST</button>
+                </form>
+            </div>
+
+            <div class="trust-scroll">
+                <div class="status-indicator" style="margin-bottom: 20px;">
+                    <div class="status-dot"></div>
+                    <span style="letter-spacing: 2px;">CLIENT FEEDBACK LOG</span>
+                </div>
+                <h2 style="color: #fff; margin-bottom: 30px;">RECOVERY STORIES</h2>
+                
+                <div class="testimonial-stack" style="display: grid; gap: 20px;">
+                    <div class="testi-card" style="padding: 20px; background: rgba(255,255,255,0.02); border-right: 2px solid var(--primary);">
+                        <p style="font-size: 0.9rem; font-style: italic; color: var(--text-dim); margin-bottom: 15px;">
+                            "Bahar se machine mangwai thi jo kharab nikli, phir AR team ne 30 min mein backup cylinder aur concentrator pohnchaya. Bohat shukria Malik Sahab."
+                        </p>
+                        <strong style="color: var(--primary); font-size: 0.8rem;">— Farhan S. (Rawalpindi)</strong>
+                    </div>
+                    
+                    <div class="testi-card" style="padding: 20px; background: rgba(255,255,255,0.02); border-right: 2px solid var(--primary);">
+                        <p style="font-size: 0.9rem; font-style: italic; color: var(--text-dim); margin-bottom: 15px;">
+                            "The ICU bed was brand new and sterilized. Their nursing staff is very professional and empathetic."
+                        </p>
+                        <strong style="color: var(--primary); font-size: 0.8rem;">— Dr. Ayesha (Islamabad)</strong>
+                    </div>
+
+                    <div class="testi-card" style="padding: 20px; background: rgba(255,255,255,0.02); border-right: 2px solid var(--primary);">
+                        <p style="font-size: 0.9rem; font-style: italic; color: var(--text-dim); margin-bottom: 15px;">
+                            "Reliable and honest services. The delivery team even explained how to use the BiPAP machine properly."
+                        </p>
+                        <strong style="color: var(--primary); font-size: 0.8rem;">— Usman Ghani (Bahria Town)</strong>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+                </section>
+                    <footer style="padding: 100px 10% 40px; border-top: 1px solid var(--border-color); background: #050505; position: relative;">
+        <div class="system-seal" style="position: absolute; top: -30px; right: 10%; width: 120px; height: 120px; border: 1px dashed var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0.3; transform: rotate(-15deg);">
+            <div style="color: var(--primary); font-size: 0.6rem; font-family: monospace; text-align: center; letter-spacing: 1px;">
+                TRUSTED BY<br>MALIK AWAIS<br>BABAR
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 60px; margin-bottom: 80px;">
+            <div class="footer-brand">
+                <div class="logo" style="margin-bottom: 25px;">
+                    <div class="plus-icon"></div>
+                    <span style="font-size: 1.8rem; font-weight: 900; letter-spacing: 2px;">AR NURSING</span>
+                </div>
+                <p style="opacity: 0.5; max-width: 350px; line-height: 1.8; font-size: 0.9rem;">
+                    Providing ICU-grade medical solutions across the twin cities. Our mission is to bridge the gap between hospital care and home recovery through the principle of Amanatdari.
+                </p>
+            </div>
+
+            <div class="footer-nav">
+                <h4 style="color: var(--primary); margin-bottom: 25px; font-size: 0.8rem; letter-spacing: 2px;">EQUIPMENT</h4>
+                <ul style="list-style: none; padding: 0; line-height: 2.5; font-size: 0.9rem;">
+                    <li><a href="equip-resp.html" style="color: var(--text-dim); text-decoration: none;">Oxygen Systems</a></li>
+                    <li><a href="equip-resp.html" style="color: var(--text-dim); text-decoration: none;">BiPAP / CPAP</a></li>
+                    <li><a href="equip-mobility.html" style="color: var(--text-dim); text-decoration: none;">Medical Beds</a></li>
+                    <li><a href="equip-mobility.html" style="color: var(--text-dim); text-decoration: none;">Air Mattresses</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-nav">
+                <h4 style="color: var(--primary); margin-bottom: 25px; font-size: 0.8rem; letter-spacing: 2px;">SERVICES</h4>
+                <ul style="list-style: none; padding: 0; line-height: 2.5; font-size: 0.9rem;">
+                    <li><a href="services.html" style="color: var(--text-dim); text-decoration: none;">ICU Nursing</a></li>
+                    <li><a href="services.html" style="color: var(--text-dim); text-decoration: none;">Physiotherapy</a></li>
+                    <li><a href="services.html" style="color: var(--text-dim); text-decoration: none;">Patient Care</a></li>
+                    <li><a href="about-us.html" style="color: var(--text-dim); text-decoration: none;">Our Vision</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-dispatch glass" style="padding: 25px; border-radius: 15px; border: 1px solid var(--border-color);">
+                <h4 style="color: #fff; margin-bottom: 15px; font-size: 0.8rem; letter-spacing: 1px;">DISPATCH CENTER</h4>
+                <p style="color: var(--primary); font-weight: 700; font-size: 1.2rem; margin-bottom: 10px;">0312 5166507</p>
+                <p style="color: var(--text-dim); font-size: 0.75rem; line-height: 1.4;">Active Response Lead: <br>Malik Awais Babar</p>
+                <div style="margin-top: 20px; font-size: 0.7rem; color: #ff4444; font-family: monospace;">
+                    [ 24/7 EMERGENCY READY ]
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 40px; display: flex; justify-content: space-between; align-items: center; font-size: 0.7rem; color: var(--text-dim); letter-spacing: 2px;">
+            <span>© 2026 ACTIVE RESPONSE (AR) | POWERED BY TECHFIXER</span>
+            <div style="display: flex; gap: 30px;">
+                <span>RAWALPINDI HUB</span>
+                <span>ISLAMABAD HUB</span>
+                <span>V6.0_STABLE</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="ui-effects.js"></script>
+    <script src="booking-handler.js"></script>
+    <script src="app.js"></script>
+
+    <script>
+        document.getElementById('home_express_form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            btn.innerText = 'DISPATCHING REQUEST...';
+            btn.style.opacity = '0.7';
+            
+            setTimeout(() => {
+                btn.innerText = 'REQUEST SENT (AMANATDARI SEALED)';
+                btn.style.background = '#00ff88';
+                btn.style.color = '#000';
+            }, 1500);
+        });
+    </script>
+
+</body>
+</html>
