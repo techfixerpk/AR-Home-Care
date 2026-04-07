@@ -1,1 +1,335 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR NURSING | System Entrance</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Portal Specific Terminal Aesthetics */
+        .portal-container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+            overflow: hidden;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .boot-log {
+            width: 80%;
+            max-width: 600px;
+            color: var(--primary);
+            font-size: 0.8rem;
+            line-height: 1.5;
+            height: 300px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+        .progress-bar-container {
+            width: 300px;
+            height: 2px;
+            background: rgba(255,255,255,0.05);
+            position: relative;
+        }
+        .progress-fill {
+            width: 0%;
+            height: 100%;
+            background: var(--primary);
+            box-shadow: 0 0 15px var(--primary);
+            transition: width 0.1s linear;
+        }
+    </style>
+</head>
+<body class="ar-protocol-bg">
+
+    <div class="portal-container">
+        <div class="logo" style="margin-bottom: 50px; transform: scale(1.5);">
+            <div class="plus-icon"></div>
+            <span style="letter-spacing: 5px; font-weight: 900;">AR NURSING</span>
+        </div>
+
+        <div class="boot-log" id="bootLog">
+            </div>
+
+        <div class="progress-bar-container">
+            <div class="progress-fill" id="progressFill"></div>
+            <div style="position: absolute; top: 10px; width: 100%; text-align: center; font-size: 0.6rem; color: var(--text-dim); letter-spacing: 2px;">
+                INITIALIZING_AMANATDARI_PROTOCOL_V6
+            </div>
+        </div>
+
+        <a href="home.html" id="enterBtn" class="primary-btn" style="margin-top: 40px; opacity: 0; pointer-events: none; text-decoration: none;">
+            ACCESS_SYSTEM_NODE
+        </a>
+    </div>
+        <script>
+        const bootLog = document.getElementById('bootLog');
+        const progressFill = document.getElementById('progressFill');
+        const enterBtn = document.getElementById('enterBtn');
+
+        const logLines = [
+            "INIT_BOOT_SEQUENCE...",
+            "KERNEL: AR_PROTOCOL_V6_STABLE",
+            "HARDWARE_CHECK: 4GB_RAM_OPTIMIZED",
+            "MAPPING_RAWALPINDI_HUB...",
+            "SYNCING_INVENTORY_LEDGER...",
+            "VERIFYING_AMANATDARI_INTEGRITY...",
+            "LOADING_ASEPTIC_SOP_NODES...",
+            "STAFF_VETTING_DATABASE: ONLINE",
+            "EMERGENCY_HOTLINE_SYNCED: 0312-5166507",
+            "SYSTEM_READY_FOR_DEPLOYMENT."
+        ];
+
+        let lineIndex = 0;
+        let progress = 0;
+
+        function startBoot() {
+            if (lineIndex < logLines.length) {
+                // Add Log Line
+                const p = document.createElement('p');
+                p.textContent = `> ${logLines[lineIndex]}`;
+                p.style.margin = '5px 0';
+                p.style.opacity = '0';
+                p.style.transition = 'opacity 0.3s';
+                bootLog.appendChild(p);
+                
+                // Scroll to bottom
+                bootLog.scrollTop = bootLog.scrollHeight;
+                
+                // Fade in line
+                setTimeout(() => { p.style.opacity = '1'; }, 50);
+
+                // Update Progress
+                progress += (100 / logLines.length);
+                progressFill.style.width = `${progress}%`;
+
+                lineIndex++;
+                
+                // Random typing delay simulation
+                const delay = Math.random() * 400 + 200;
+                setTimeout(startBoot, delay);
+            } else {
+                // Boot Complete
+                finalizeBoot();
+            }
+        }
+
+        function finalizeBoot() {
+            setTimeout(() => {
+                enterBtn.style.opacity = '1';
+                enterBtn.style.pointerEvents = 'auto';
+                enterBtn.style.transform = 'translateY(0)';
+                enterBtn.style.transition = 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+                
+                // Final Success Message
+                const success = document.createElement('p');
+                success.textContent = ">>> [ ACCESS_GRANTED_SUCCESSFULLY ]";
+                success.style.color = "#fff";
+                success.style.fontWeight = "bold";
+                bootLog.appendChild(success);
+            }, 500);
+        }
+
+        // Start Protocol on Window Load
+        window.onload = () => {
+            setTimeout(startBoot, 800);
+        };
+    </script>
+
+    <style>
+        #enterBtn {
+            transform: translateY(20px);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+        }
+        #enterBtn:hover {
+            box-shadow: 0 0 40px rgba(0, 255, 136, 0.4);
+            letter-spacing: 4px;
+        }
+    </style>
+        <meta name="description" content="AR Nursing: Professional Home ICU & Nursing Services in Rawalpindi/Islamabad. Directed by Malik Awais Babar. High-precision medical care with Amanatdari Protocol.">
+    <meta name="keywords" content="Home Nursing Rawalpindi, ICU Setup Islamabad, Ventilator Rental, Malik Awais Babar, TechFixer Medical, Patient Care Pakistan">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "AR Nursing & Critical Care",
+      "alternateName": "Active Response Nursing",
+      "operator": "Malik Awais Babar",
+      "location": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Chamanabad",
+          "addressLocality": "Rawalpindi",
+          "addressRegion": "Punjab",
+          "addressCountry": "PK"
+        }
+      },
+      "url": "https://arnursing.pk",
+      "telephone": "+923125166507",
+      "priceRange": "$$",
+      "medicalSpecialty": ["Nursing", "EmergencyCare", "Physiotherapy"],
+      "availableService": [
+        {
+          "@type": "MedicalTest",
+          "name": "Home ICU Deployment"
+        },
+        {
+          "@type": "MedicalTest",
+          "name": "IV Therapy & Injectables"
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* Ensuring 4GB RAM Smoothness & No Layout Shift */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            color: #fff;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* System Canvas Overlay */
+        .system-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 50% 50%, rgba(0, 255, 136, 0.02) 0%, transparent 70%),
+                linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+            background-size: 100% 100%, 50px 50px, 50px 50px;
+        }
+    </style>
+
+    <div class="system-canvas"></div>
+        <div class="protocol-seal-container" style="position: absolute; bottom: 40px; right: 40px; opacity: 0.5;">
+        <div class="seal-outer" style="width: 100px; height: 100px; border: 1px dashed var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; animation: rotate-slow 20s linear infinite;">
+            <div class="seal-inner" style="width: 70px; height: 70px; border: 1px double var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <span style="font-size: 0.5rem; color: var(--primary); font-family: monospace; text-align: center; letter-spacing: 1px;">
+                    TRUSTED<br>VERIFIED<br>2026
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <noscript>
+        <div style="position: fixed; inset: 0; background: #000; color: #fff; z-index: 9999; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px;">
+            <h1 style="color: var(--primary);">AR NURSING PROTOCOL</h1>
+            <p>JavaScript is required for the full experience. However, for immediate medical assistance:</p>
+            <h2 style="font-size: 2rem; margin: 20px 0;">0312 5166507</h2>
+            <p style="opacity: 0.6;">Malik Awais Babar - CEO TechFixer</p>
+        </div>
+    </noscript>
+
+    <div class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">
+        Active Response Nursing and Critical Care home services in Rawalpindi and Islamabad. Specialized ICU and Nursing care managed by Malik Awais Babar.
+    </div>
+
+    <style>
+        @keyframes rotate-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Scanline Effect for Terminal Feel */
+        .portal-container::before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+            opacity: 0.1;
+        }
+    </style>
+        <footer style="position: absolute; bottom: 20px; left: 0; width: 100%; padding: 0 10%; box-sizing: border-box; display: flex; justify-content: space-between; align-items: flex-end; z-index: 10;">
+        
+        <div class="footer-meta" style="font-family: monospace; font-size: 0.65rem; color: var(--text-dim); line-height: 1.6;">
+            <div>OPERATOR: MALIK_AWAIS_BABAR</div>
+            <div>LOCATION: RWP_CHAMANABAD_NODE</div>
+            <div style="color: var(--primary); opacity: 0.8;">[ SYSTEM_STATUS: 100%_STABLE ]</div>
+        </div>
+
+        <div class="techfixer-signature" style="text-align: right;">
+            <div style="font-size: 0.5rem; color: var(--text-dim); letter-spacing: 2px; margin-bottom: 5px;">ENGINEERED_BY</div>
+            <div style="font-weight: 900; letter-spacing: 1px; color: #fff; font-size: 0.8rem;">
+                TECH<span style="color: var(--primary);">FIXER</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Protocol: Device & Performance Handshake
+        window.addEventListener('DOMContentLoaded', () => {
+            const ram = navigator.deviceMemory || 4;
+            console.log(`AR-Protocol: Optimizing for ${ram}GB RAM Environment.`);
+            
+            // Interaction: Button Hover Sound (Visual Simulation)
+            const enterBtn = document.getElementById('enterBtn');
+            enterBtn.addEventListener('mouseenter', () => {
+                const hoverLine = document.createElement('div');
+                hoverLine.style.position = 'absolute';
+                hoverLine.style.width = '100%';
+                hoverLine.style.height = '1px';
+                hoverLine.style.background = 'var(--primary)';
+                hoverLine.style.top = '50%';
+                hoverLine.style.left = '0';
+                hoverLine.style.boxShadow = '0 0 10px var(--primary)';
+                hoverLine.style.pointerEvents = 'none';
+                enterBtn.appendChild(hoverLine);
+                
+                setTimeout(() => hoverLine.remove(), 200);
+            });
+        });
+
+        // Prevention: Double Loading
+        let isRedirecting = false;
+        document.getElementById('enterBtn').addEventListener('click', (e) => {
+            if(isRedirecting) return;
+            isRedirecting = true;
+            console.log("AR-Protocol: Transitioning to Home Node...");
+        });
+    </script>
+
+    <style>
+        ::selection {
+            background: var(--primary);
+            color: #000;
+        }
+
+        /* Smooth scroll for the entire ecosystem */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 4GB RAM Optimization: Disable heavy blur on low-end */
+        @media (max-width: 768px) {
+            .glass {
+                backdrop-filter: none !important;
+                background: rgba(10, 10, 10, 0.95) !important;
+            }
+        }
+    </style>
+
+</body>
+</html>
