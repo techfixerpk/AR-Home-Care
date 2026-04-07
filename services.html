@@ -1,1 +1,294 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | AR (Active Response) Nursing</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Services Node Specific Visuals */
+        .services-hero {
+            padding: 160px 10% 80px;
+            background: linear-gradient(180deg, #0a0a0a 0%, #000 100%);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .service-nav-pill {
+            padding: 8px 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .service-nav-pill:hover, .service-nav-pill.active {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: rgba(0, 255, 136, 0.05);
+        }
+    </style>
+</head>
+<body class="ar-protocol-bg">
+
+    <nav class="nav-bar glass">
+        <div class="logo">
+            <div class="plus-icon"></div>
+            <span>AR NURSING</span>
+        </div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <button class="primary-btn emergency-trigger">0312 5166507</button>
+    </nav>
+
+    <section class="services-hero">
+        <div class="hero-content">
+            <div class="status-indicator" style="margin-bottom: 20px; border-color: var(--primary);">
+                <div class="status-dot" style="background: var(--primary); box-shadow: 0 0 10px var(--primary);"></div>
+                <span style="color: var(--primary); letter-spacing: 2px;">SERVICE_NODE_V6</span>
+            </div>
+            <h1 class="glitch-text" data-text="CLINICAL SERVICES">CLINICAL SERVICES</h1>
+            <p class="subtitle" style="max-width: 650px;">From 24/7 ICU Nursing to Specialized Physiotherapy. Every service is backed by our Amanatdari Protocol and professional clinical staff.</p>
+            
+            <div style="display: flex; gap: 15px; margin-top: 40px; flex-wrap: wrap;">
+                <div class="service-nav-pill active" onclick="filterServices('all')">All Services</div>
+                <div class="service-nav-pill" onclick="filterServices('nursing')">Nursing Care</div>
+                <div class="service-nav-pill" onclick="filterServices('therapy')">Physical Therapy</div>
+                <div class="service-nav-pill" onclick="filterServices('icu')">ICU Management</div>
+            </div>
+        </div>
+    </section>
+        <section id="nursing-section" class="service-grid-section" style="padding: 100px 10%; background: #050505; border-top: 1px solid var(--border-color);">
+        <div class="section-header" style="margin-bottom: 60px;">
+            <h3 style="color: var(--primary); letter-spacing: 3px; font-size: 0.8rem; margin-bottom: 10px;">NODE_01: NURSING_CARE</h3>
+            <h2 style="color: #fff; font-size: 2.5rem;">PROFESSIONAL NURSING</h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+            
+            <div class="service-card glass" data-category="nursing" style="padding: 40px; border-radius: 15px; border: 1px solid var(--border-color); position: relative; transition: 0.4s;">
+                <div class="step-number" style="font-family: monospace; font-size: 3rem; color: rgba(255,255,255,0.02); position: absolute; top: 10px; right: 20px;">01</div>
+                <h4 style="color: #fff; margin-bottom: 15px; letter-spacing: 1px;">GENERAL NURSING</h4>
+                <p style="color: var(--text-dim); font-size: 0.85rem; line-height: 1.6; margin-bottom: 25px;">
+                    Daily medical assistance, vital monitoring, medication management, and patient hygiene for non-critical cases.
+                </p>
+                <ul style="list-style: none; padding: 0; margin-bottom: 30px; font-size: 0.75rem; color: var(--primary); line-height: 2;">
+                    <li>+ 12/24 Hour Shifts Available</li>
+                    <li>+ Medication Administration</li>
+                    <li>+ Wound Dressing & Care</li>
+                </ul>
+                <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 20px;">
+                    <span style="font-family: monospace; font-size: 0.6rem; color: var(--text-dim);">ID: SERV_GN_01</span>
+                    <button class="secondary-btn" style="padding: 8px 15px; font-size: 0.7rem;">BOOK_NOW</button>
+                </div>
+            </div>
+
+            <div class="service-card glass" data-category="icu" style="padding: 40px; border-radius: 15px; border-left: 4px solid var(--primary); position: relative; transition: 0.4s; background: rgba(0, 255, 136, 0.02);">
+                <div class="step-number" style="font-family: monospace; font-size: 3rem; color: rgba(0, 255, 136, 0.05); position: absolute; top: 10px; right: 20px;">02</div>
+                <h4 style="color: #fff; margin-bottom: 15px; letter-spacing: 1px;">ICU / CRITICAL CARE</h4>
+                <p style="color: var(--text-dim); font-size: 0.85rem; line-height: 1.6; margin-bottom: 25px;">
+                    High-dependency nursing for patients on ventilators, monitors, or complex IV infusions. Specialized ICU staff only.
+                </p>
+                <ul style="list-style: none; padding: 0; margin-bottom: 30px; font-size: 0.75rem; color: var(--primary); line-height: 2;">
+                    <li>+ Ventilator Management</li>
+                    <li>+ Invasive Line Monitoring</li>
+                    <li>+ Emergency Response Protocol</li>
+                </ul>
+                <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 20px;">
+                    <span style="font-family: monospace; font-size: 0.6rem; color: var(--text-dim);">ID: SERV_ICU_02</span>
+                    <button class="primary-btn" style="padding: 8px 15px; font-size: 0.7rem;">DEPLOY_LEAD</button>
+                </div>
+            </div>
+
+        </div>
+        </section>
+            <section id="therapy-section" class="therapy-grid-section" style="padding: 100px 10%; background: #080808; border-top: 1px solid var(--border-color);">
+        <div class="section-header" style="margin-bottom: 60px;">
+            <h3 style="color: var(--primary); letter-spacing: 3px; font-size: 0.8rem; margin-bottom: 10px;">NODE_02: RECOVERY_PROCEDURES</h3>
+            <h2 style="color: #fff; font-size: 2.5rem;">THERAPY & CLINICAL</h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+            
+            <div class="service-card glass" data-category="therapy" style="padding: 40px; border-radius: 15px; border: 1px solid var(--border-color); position: relative; transition: 0.4s;">
+                <div class="step-number" style="font-family: monospace; font-size: 3rem; color: rgba(255,255,255,0.02); position: absolute; top: 10px; right: 20px;">03</div>
+                <h4 style="color: #fff; margin-bottom: 15px; letter-spacing: 1px;">PHYSICAL THERAPY</h4>
+                <p style="color: var(--text-dim); font-size: 0.85rem; line-height: 1.6; margin-bottom: 25px;">
+                    Post-stroke recovery, orthopedic rehabilitation, and chest physiotherapy by certified clinical therapists.
+                </p>
+                <ul style="list-style: none; padding: 0; margin-bottom: 30px; font-size: 0.75rem; color: var(--primary); line-height: 2;">
+                    <li>+ Stroke Rehabilitation</li>
+                    <li>+ Post-Surgery Mobility</li>
+                    <li>+ Muscle Strengthening</li>
+                </ul>
+                <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 20px;">
+                    <span style="font-family: monospace; font-size: 0.6rem; color: var(--text-dim);">ID: SERV_PT_03</span>
+                    <button class="secondary-btn" style="padding: 8px 15px; font-size: 0.7rem;">BOOK_SESSION</button>
+                </div>
+            </div>
+
+            <div class="service-card glass" data-category="nursing" style="padding: 40px; border-radius: 15px; border: 1px solid var(--border-color); position: relative; transition: 0.4s;">
+                <div class="step-number" style="font-family: monospace; font-size: 3rem; color: rgba(255,255,255,0.02); position: absolute; top: 10px; right: 20px;">04</div>
+                <h4 style="color: #fff; margin-bottom: 15px; letter-spacing: 1px;">CLINICAL PROCEDURES</h4>
+                <p style="color: var(--text-dim); font-size: 0.85rem; line-height: 1.6; margin-bottom: 25px;">
+                    Short-term clinical tasks including IV infusions, catheterization, NG tube insertion, and lab sample collection.
+                </p>
+                <ul style="list-style: none; padding: 0; margin-bottom: 30px; font-size: 0.75rem; color: var(--primary); line-height: 2;">
+                    <li>+ IV Antibiotic Infusions</li>
+                    <li>+ Catheter & NG Management</li>
+                    <li>+ Blood Sample Home Pick</li>
+                </ul>
+                <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 20px;">
+                    <span style="font-family: monospace; font-size: 0.6rem; color: var(--text-dim);">ID: SERV_CP_04</span>
+                    <button class="secondary-btn" style="padding: 8px 15px; font-size: 0.7rem;">REQUEST_TASK</button>
+                </div>
+            </div>
+
+        </div>
+            </section>
+                <section class="staff-vetting" style="padding: 100px 10%; background: #050505; border-top: 1px solid var(--border-color);">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+            
+            <div class="vetting-text">
+                <div class="status-indicator" style="margin-bottom: 20px; border-color: #ffcc00;">
+                    <div class="status-dot" style="background: #ffcc00; box-shadow: 0 0 10px #ffcc00;"></div>
+                    <span style="color: #ffcc00; letter-spacing: 2px;">VETTING_PROTOCOL_V6</span>
+                </div>
+                <h2 style="color: #fff; font-size: 2.5rem; margin-bottom: 25px;">STAFF VERIFICATION</h2>
+                <p style="color: var(--text-dim); line-height: 1.8; margin-bottom: 30px;">
+                    Ghar mein nursing staff rakhna aik bari zimaydari hai. Hamara har staff member "Amanatdari Protocol" ke tehat 3-level verification se guzarta hai:
+                </p>
+
+                <div class="protocol-grid" style="display: grid; gap: 20px;">
+                    <div style="padding: 20px; background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 10px;">
+                        <h4 style="color: #fff; font-size: 0.9rem; margin-bottom: 8px;">1. CLINICAL AUDIT</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-dim);">Practical skills test and degree verification from recognized medical institutions.</p>
+                    </div>
+                    <div style="padding: 20px; background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 10px;">
+                        <h4 style="color: #fff; font-size: 0.9rem; margin-bottom: 8px;">2. BACKGROUND CHECK</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-dim);">CNIC verification and previous employment history mapping.</p>
+                    </div>
+                    <div style="padding: 20px; background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 10px;">
+                        <h4 style="color: #fff; font-size: 0.9rem; margin-bottom: 8px;">3. AMANATDARI OATH</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-dim);">Strict adherence to patient privacy, honesty, and family values within the home.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vetting-visual glass" style="padding: 50px; text-align: center; border-radius: 20px; border: 1px dashed var(--border-color); position: relative; overflow: hidden;">
+                <div style="width: 100px; height: 100px; margin: 0 auto 30px; border: 2px solid var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <div style="width: 60px; height: 60px; background: var(--primary); border-radius: 50%; opacity: 0.2; animation: pulse 2s infinite;"></div>
+                </div>
+                <h3 style="color: var(--primary); letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 10px;">IDENTITY_LOCKED</h3>
+                <p style="color: var(--text-dim); font-size: 0.65rem; font-family: monospace;">
+                    DB_HASH: AR_STAFF_SYNC_2026<br>
+                    STATUS: 100%_CLEAN_RECORD
+                </p>
+                <div class="scan-bar" style="position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: var(--primary); box-shadow: 0 0 15px var(--primary); animation: scan-move 4s infinite linear;"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <style>
+        @keyframes scan-move {
+            0% { top: 0; opacity: 0.5; }
+            50% { top: 100%; opacity: 1; }
+            100% { top: 0; opacity: 0.5; }
+        }
+    </style>
+        <footer style="padding: 100px 10% 40px; border-top: 1px solid var(--border-color); background: #050505; position: relative; overflow: hidden;">
+        <div class="system-seal" style="position: absolute; top: -30px; right: 10%; width: 120px; height: 120px; border: 1px dashed var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0.3; transform: rotate(-15deg);">
+            <div style="color: var(--primary); font-size: 0.6rem; font-family: monospace; text-align: center; letter-spacing: 1px;">
+                SERVICE_VERIFIED<br>MALIK AWAIS<br>BABAR
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 60px;">
+            <div class="footer-brand">
+                <div class="logo" style="margin-bottom: 25px;">
+                    <div class="plus-icon"></div>
+                    <span style="font-size: 1.5rem; font-weight: 900; letter-spacing: 2px;">AR NURSING</span>
+                </div>
+                <p style="opacity: 0.5; max-width: 350px; line-height: 1.8; font-size: 0.85rem;">
+                    Clinical Services Node: Providing professional healthcare at your doorstep. Built on the principles of Amanatdari and 100% native logic.
+                </p>
+            </div>
+
+            <div class="footer-nav">
+                <h4 style="color: var(--primary); margin-bottom: 25px; font-size: 0.8rem; letter-spacing: 2px;">NODES</h4>
+                <ul style="list-style: none; padding: 0; line-height: 2.5; font-size: 0.85rem;">
+                    <li><a href="proc-icu.html" style="color: var(--text-dim); text-decoration: none;">ICU Protocol</a></li>
+                    <li><a href="proc-iv.html" style="color: var(--text-dim); text-decoration: none;">IV Therapy</a></li>
+                    <li><a href="locations.html" style="color: var(--text-dim); text-decoration: none;">Coverage Map</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-dispatch">
+                <h4 style="color: var(--primary); margin-bottom: 25px; font-size: 0.8rem; letter-spacing: 2px;">DISPATCH</h4>
+                <p style="color: #fff; font-weight: 700; font-size: 1.1rem; margin-bottom: 5px;">0312 5166507</p>
+                <p style="color: var(--text-dim); font-size: 0.75rem;">Active Response Unit</p>
+                <div style="margin-top: 20px; font-size: 0.6rem; color: var(--primary); font-family: monospace;">
+                    [ STATUS: SYSTEM_ONLINE ]
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; font-size: 0.7rem; color: var(--text-dim); letter-spacing: 2px;">
+            <span>© 2026 AR SERVICES | POWERED BY TECHFIXER</span>
+            <div style="display: flex; gap: 20px;">
+                <span>STABLE_V6</span>
+                <span>RAWALPINDI_HUB</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="ui-effects.js"></script>
+    <script src="app.js"></script>
+
+    <script>
+        function filterServices(category) {
+            const cards = document.querySelectorAll('.service-card');
+            const pills = document.querySelectorAll('.service-nav-pill');
+            
+            // Update Active Pill
+            pills.forEach(pill => {
+                pill.classList.remove('active');
+                if(pill.textContent.toLowerCase().includes(category) || (category === 'all' && pill.textContent.includes('All'))) {
+                    pill.classList.add('active');
+                }
+            });
+
+            // Filter Logic
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 50);
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }, 300);
+            });
+        }
+
+        // Protocol: Silent Sync on Load
+        window.addEventListener('load', () => {
+            console.log("AR-Protocol: Service Nodes Synchronized.");
+        });
+    </script>
+
+</body>
+</html>
