@@ -1,1 +1,235 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobility & Patient Beds | AR (Active Response)</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Page-Specific Mobility Hero */
+        .mobility-hero {
+            padding: 160px 10% 60px;
+            background: linear-gradient(135deg, var(--surface-dark) 0%, #0c0c0c 100%);
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-accent-line {
+            position: absolute;
+            bottom: 0; left: 10%; width: 200px; height: 4px;
+            background: var(--primary);
+            box-shadow: 0 0 20px var(--primary-glow);
+        }
+    </style>
+</head>
+<body class="ar-protocol-bg">
+
+    <nav class="nav-bar glass">
+        <div class="logo">
+            <div class="plus-icon"></div>
+            <span>AR NURSING</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="inventory.html" class="active">Equipment</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <button class="primary-btn emergency-trigger">EMERGENCY</button>
+    </nav>
+
+    <section class="mobility-hero">
+        <div class="hero-content">
+            <div class="status-indicator" style="margin-bottom: 20px;">
+                <div class="status-dot"></div>
+                <span style="letter-spacing: 2px;">INVENTORY NODE: MOBILITY_V1</span>
+            </div>
+            <h1 class="glitch-text" data-text="PATIENT MOBILITY">PATIENT MOBILITY</h1>
+            <p class="subtitle" style="max-width: 600px;">ICU-Grade Hospital Beds, Electric Orthopedic Solutions, and Premium Wheelchairs for Home Care Recovery.</p>
+        </div>
+        <div class="hero-accent-line"></div>
+    </section>
+        <section class="inventory-controls" style="padding: 40px 10%; background: #0a0a0a; border-bottom: 1px solid var(--border-color);">
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 40px; flex-wrap: wrap;">
+            
+            <div class="search-wrapper glass" style="flex: 1; min-width: 300px; position: relative;">
+                <input type="text" id="inventory_search" placeholder="Search: Hospital Beds, Wheelchairs, Air Mattresses..." 
+                       style="width: 100%; background: transparent; border: 1px solid var(--border-color); padding: 15px 50px; color: #fff; border-radius: 8px; font-size: 0.9rem;">
+                <div class="hex-icon" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%) scale(0.6); background: var(--primary);"></div>
+            </div>
+
+            <div class="filter-group" style="display: flex; gap: 15px;">
+                <button class="filter-btn active-pulse" data-cat="mobility" style="padding: 10px 25px; background: transparent; border: 1px solid var(--primary); color: var(--primary); border-radius: 4px; font-size: 0.8rem; cursor: pointer; letter-spacing: 1px;">
+                    ALL MOBILITY
+                </button>
+                <button class="filter-btn" data-cat="beds" style="padding: 10px 25px; background: transparent; border: 1px solid var(--border-color); color: var(--text-dim); border-radius: 4px; font-size: 0.8rem; cursor: pointer; letter-spacing: 1px;">
+                    HOSPITAL BEDS
+                </button>
+                <button class="filter-btn" data-cat="support" style="padding: 10px 25px; background: transparent; border: 1px solid var(--border-color); color: var(--text-dim); border-radius: 4px; font-size: 0.8rem; cursor: pointer; letter-spacing: 1px;">
+                    SUPPORT GEAR
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="inventory-container" style="padding: 60px 10%; min-height: 600px;">
+        <div id="inventory_display_grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px;">
+            <div class="loading-state" style="grid-column: 1/-1; text-align: center; padding: 100px;">
+                <div class="plus-icon" style="margin: 0 auto 20px; animation: pulse 2s infinite;"></div>
+                <p style="color: var(--primary); letter-spacing: 2px;">INITIALIZING MOBILITY NODE...</p>
+            </div>
+        </div>
+    </section>
+        <section class="featured-mobility" style="padding: 100px 10%; background: var(--surface-dark); border-top: 1px solid var(--border-color);">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+            
+            <div class="schematic-container glass" style="height: 450px; position: relative; border-radius: 20px; overflow: hidden; background: #050505;">
+                <div class="grid-overlay" style="position: absolute; inset: 0; background-image: linear-gradient(var(--border-color) 1px, transparent 1px), linear-gradient(90deg, var(--border-color) 1px, transparent 1px); background-size: 20px 20px; opacity: 0.1;"></div>
+                
+                <div class="bed-frame" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 250px; height: 120px; border: 2px solid var(--primary); border-radius: 5px; box-shadow: 0 0 30px var(--primary-glow);">
+                    <div style="position: absolute; top: -10px; right: 20px; width: 60px; height: 10px; background: var(--primary);"></div> <div style="position: absolute; bottom: -15px; left: 20px; width: 10px; height: 20px; background: var(--primary);"></div> <div style="position: absolute; bottom: -15px; right: 20px; width: 10px; height: 20px; background: var(--primary);"></div> </div>
+
+                <div style="position: absolute; bottom: 30px; left: 30px; font-family: monospace; font-size: 0.7rem; color: var(--primary);">
+                    MODEL: AR-EB-V6 <br> TYPE: 3-FUNCTION ELECTRIC
+                </div>
+            </div>
+
+            <div class="tech-specs">
+                <h2 style="color: var(--primary); margin-bottom: 20px; letter-spacing: 2px;">TECHNICAL COMPARISON</h2>
+                <p style="opacity: 0.6; margin-bottom: 30px;">Compare our top-tier mobility solutions for long-term home care.</p>
+                
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem; color: var(--text-dim);">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--border-color); text-align: left;">
+                            <th style="padding: 15px 0; color: #fff;">Feature</th>
+                            <th style="padding: 15px 0; color: #fff;">Manual Bed</th>
+                            <th style="padding: 15px 0; color: var(--primary);">Electric (Pro)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <td style="padding: 15px 0;">Backrest Tilt</td>
+                            <td style="padding: 15px 0;">Hand Crank</td>
+                            <td style="padding: 15px 0;">Remote Control</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <td style="padding: 15px 0;">Height Adjust</td>
+                            <td style="padding: 15px 0;">Fixed</td>
+                            <td style="padding: 15px 0;">Motorized</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <td style="padding: 15px 0;">Wheels</td>
+                            <td style="padding: 15px 0;">Standard</td>
+                            <td style="padding: 15px 0;">Central Locking</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px 0;">Best For</td>
+                            <td style="padding: 15px 0;">Budget Care</td>
+                            <td style="padding: 15px 0; color: var(--primary);">Post-Surgery</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        </section>
+            <section class="rental-logistics" style="padding: 100px 10%; border-top: 1px solid var(--border-color);">
+        <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 60px;">
+            
+            <div class="terms-box glass" style="padding: 40px; border-radius: 15px; border: 1px solid rgba(0, 255, 136, 0.2);">
+                <h3 style="color: var(--primary); margin-bottom: 25px; letter-spacing: 1px;">RENTAL PROTOCOL</h3>
+                <div class="protocol-list" style="display: grid; gap: 20px;">
+                    <div style="display: flex; gap: 15px; align-items: flex-start;">
+                        <div class="plus-icon" style="width: 15px; height: 15px; margin-top: 5px;"></div>
+                        <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-dim);">
+                            <strong style="color: #fff;">Security Deposit:</strong> A refundable security deposit is required for all electric beds and high-end mobility gear. This is returned immediately upon equipment pickup.
+                        </p>
+                    </div>
+                    <div style="display: flex; gap: 15px; align-items: flex-start;">
+                        <div class="plus-icon" style="width: 15px; height: 15px; margin-top: 5px;"></div>
+                        <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-dim);">
+                            <strong style="color: #fff;">Maintenance Log:</strong> Every piece of equipment undergoes a "Sterilization & Functionality Check" before dispatch. We provide a signed checklist with every delivery.
+                        </p>
+                    </div>
+                    <div style="display: flex; gap: 15px; align-items: flex-start;">
+                        <div class="plus-icon" style="width: 15px; height: 15px; margin-top: 5px;"></div>
+                        <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-dim);">
+                            <strong style="color: #fff;">Damage Policy:</strong> We uphold the principle of Amanatdari. Fair wear and tear is expected, but structural damage to motors or frames must be reported immediately.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="delivery-radius" style="text-align: right;">
+                <h3 style="color: var(--primary); margin-bottom: 20px; letter-spacing: 1px;">DELIVERY REACH</h3>
+                <p style="opacity: 0.6; font-size: 0.9rem; margin-bottom: 30px;">Heavy equipment logistics are managed by our specialized transport team.</p>
+                
+                <div class="radius-visual" style="position: relative; width: 100%; height: 200px; border: 1px dashed var(--border-color); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                    <div class="pulse-active" style="width: 80px; height: 80px; border: 1px solid var(--primary); border-radius: 50%; opacity: 0.3;"></div>
+                    <div style="position: absolute; color: var(--primary); font-family: monospace; font-size: 0.7rem; text-align: center;">
+                        CORE ZONE<br>45 MIN DELIVERY
+                    </div>
+                </div>
+                <ul style="list-style: none; margin-top: 20px; color: var(--text-dim); font-size: 0.8rem; line-height: 2;">
+                    <li>• Rawalpindi (All Phases)</li>
+                    <li>• Islamabad (Sector F, G, H, I)</li>
+                    <li>• Bahria Town & DHA (Priority)</li>
+                </ul>
+            </div>
+
+        </div>
+            </section>
+                <footer style="padding: 80px 10% 40px; border-top: 1px solid var(--border-color); background: #080808;">
+        <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 60px;">
+            <div class="footer-brand">
+                <div class="logo" style="margin-bottom: 20px;">
+                    <div class="plus-icon"></div>
+                    <span style="font-size: 1.5rem; font-weight: 900; letter-spacing: 2px;">AR NURSING</span>
+                </div>
+                <p style="opacity: 0.5; max-width: 400px; line-height: 1.6;">
+                    Specialized Mobility Node: High-precision hospital beds and recovery gear managed under the principle of Amanatdari.
+                </p>
+            </div>
+            
+            <div class="footer-links">
+                <h4 style="color: var(--primary); margin-bottom: 20px; font-size: 0.9rem; letter-spacing: 1px;">CATEGORIES</h4>
+                <ul style="list-style: none; padding: 0; line-height: 2;">
+                    <li><a href="equip-respiratory.html" style="color: var(--text-dim); text-decoration: none;">Respiratory</a></li>
+                    <li><a href="equip-mobility.html" style="color: var(--primary); text-decoration: none;">Mobility & Beds</a></li>
+                    <li><a href="services.html" style="color: var(--text-dim); text-decoration: none;">Nursing Care</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4 style="color: var(--primary); margin-bottom: 20px; font-size: 0.9rem; letter-spacing: 1px;">SUPPORT</h4>
+                <p style="color: #fff; font-weight: 700;">0312 5166507</p>
+                <p style="color: var(--text-dim); font-size: 0.8rem;">Malik Awais Babar</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; font-size: 0.7rem; color: var(--text-dim); letter-spacing: 1px;">
+            <span>© 2026 AR MOBILITY | RAWALPINDI/ISLAMABAD</span>
+            <span>HARDWARE-OPTIMIZED V6.0</span>
+        </div>
+    </footer>
+
+    <script src="ui-effects.js"></script>
+    <script src="booking-handler.js"></script>
+    <script src="app.js"></script>
+
+    <script>
+        window.addEventListener('load', () => {
+            // Force ARApp to load mobility category on this specific page
+            setTimeout(() => {
+                if (window.ARApp) {
+                    ARApp.filterByCategory('mobility');
+                    console.log("AR-Protocol: Mobility Node Auto-Filtered.");
+                }
+            }, 500); // Slight delay to ensure data-fetch completion
+        });
+    </script>
+
+</body>
+</html>
