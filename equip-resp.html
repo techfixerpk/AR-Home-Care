@@ -1,1 +1,233 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respiratory Care | AR (Active Response) Oxygen & BiPAP</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Respiratory-Specific Pulse Background */
+        .resp-hero {
+            padding: 160px 10% 80px;
+            background: radial-gradient(circle at bottom left, rgba(0, 255, 136, 0.05), transparent);
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+        }
+        .flow-line {
+            position: absolute;
+            bottom: 0; right: 10%; width: 300px; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            animation: flow-move 3s infinite linear;
+        }
+        @keyframes flow-move {
+            0% { transform: translateX(100%); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateX(-100%); opacity: 0; }
+        }
+    </style>
+</head>
+<body class="ar-protocol-bg">
+
+    <nav class="nav-bar glass">
+        <div class="logo">
+            <div class="plus-icon"></div>
+            <span>AR NURSING</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="inventory.html" class="active">Equipment</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <button class="primary-btn emergency-trigger" style="background: #ff4444; border-color: #ff4444;">EMERGENCY O2</button>
+    </nav>
+
+    <section class="resp-hero">
+        <div class="hero-content">
+            <div class="status-indicator" style="margin-bottom: 20px; border-color: var(--primary);">
+                <div class="status-dot" style="background: var(--primary);"></div>
+                <span style="color: var(--primary); letter-spacing: 2px;">OXYGEN NODE: CRITICAL_CARE_V6</span>
+            </div>
+            <h1 class="glitch-text" data-text="RESPIRATORY SUPPORT">RESPIRATORY SUPPORT</h1>
+            <p class="subtitle" style="max-width: 650px;">High-Purity Oxygen Concentrators, BiPAP/CPAP Machines, and Emergency Cylinders with 45-Minute Express Delivery.</p>
+        </div>
+        <div class="flow-line"></div>
+    </section>
+        <section class="inventory-controls" style="padding: 40px 10%; background: #0a0a0a; border-bottom: 1px solid var(--border-color);">
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 40px; flex-wrap: wrap;">
+            
+            <div class="search-wrapper glass" style="flex: 1; min-width: 300px; position: relative;">
+                <input type="text" id="inventory_search" placeholder="Search: Oxygen, BiPAP, CPAP, Cylinders..." 
+                       style="width: 100%; background: transparent; border: 1px solid var(--border-color); padding: 15px 50px; color: #fff; border-radius: 8px; font-size: 0.9rem;">
+                <div class="hex-icon" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%) scale(0.6); background: var(--primary);"></div>
+            </div>
+
+            <div class="filter-group" style="display: flex; gap: 15px;">
+                <button class="filter-btn active-pulse" data-cat="respiratory" style="padding: 10px 25px; background: transparent; border: 1px solid var(--primary); color: var(--primary); border-radius: 4px; font-size: 0.8rem; cursor: pointer; letter-spacing: 1px;">
+                    ALL RESPIRATORY
+                </button>
+                <button class="filter-btn" data-cat="oxygen" style="padding: 10px 25px; background: transparent; border: 1px solid var(--border-color); color: var(--text-dim); border-radius: 4px; font-size: 0.8rem; cursor: pointer; letter-spacing: 1px;">
+                    OXYGEN SYSTEMS
+                </button>
+                <button class="filter-btn" data-cat="bipap" style="padding: 10px 25px; background: transparent; border: 1px solid var(--border-color); color: var(--text-dim); border-radius: 4px; font-size: 0.8rem; cursor: pointer; letter-spacing: 1px;">
+                    BIPAP / CPAP
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="inventory-container" style="padding: 60px 10%; min-height: 600px;">
+        <div id="inventory_display_grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px;">
+            <div class="loading-state" style="grid-column: 1/-1; text-align: center; padding: 100px;">
+                <div class="plus-icon" style="margin: 0 auto 20px; animation: pulse 2s infinite;"></div>
+                <p style="color: var(--primary); letter-spacing: 2px;">SYNCHRONIZING RESPIRATORY DATA...</p>
+            </div>
+        </div>
+    </section>
+        <section class="safety-protocol" style="padding: 100px 10%; background: var(--surface-dark); border-top: 1px solid var(--border-color);">
+        <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center;">
+            
+            <div class="usage-guide glass" style="padding: 40px; border-radius: 15px; border: 1px solid var(--primary-glow);">
+                <h3 style="color: var(--primary); margin-bottom: 25px; letter-spacing: 1px;">MACHINE USAGE GUIDE</h3>
+                <div class="step-list" style="display: grid; gap: 20px;">
+                    <div style="display: flex; gap: 20px;">
+                        <div class="step-num" style="color: var(--primary); font-family: monospace; font-weight: 900;">01</div>
+                        <p style="font-size: 0.85rem; color: var(--text-dim); line-height: 1.6;">
+                            <strong style="color: #fff;">Water Level Check:</strong> Use only distilled water in the humidifier bottle to prevent mineral buildup in the machine.
+                        </p>
+                    </div>
+                    <div style="display: flex; gap: 20px;">
+                        <div class="step-num" style="color: var(--primary); font-family: monospace; font-weight: 900;">02</div>
+                        <p style="font-size: 0.85rem; color: var(--text-dim); line-height: 1.6;">
+                            <strong style="color: #fff;">Flow Adjustment:</strong> Set the LPM (Litres Per Minute) exactly as prescribed by your doctor. Never exceed 5L without professional advice.
+                        </p>
+                    </div>
+                    <div style="display: flex; gap: 20px;">
+                        <div class="step-num" style="color: var(--primary); font-family: monospace; font-weight: 900;">03</div>
+                        <p style="font-size: 0.85rem; color: var(--text-dim); line-height: 1.6;">
+                            <strong style="color: #fff;">Filter Cleaning:</strong> Ensure the external foam filter is dusted daily for optimal air purity and motor longevity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sterilization-info">
+                <div class="hex-icon" style="background: var(--primary); margin-bottom: 20px; width: 40px; height: 40px;"></div>
+                <h2 style="color: var(--primary); margin-bottom: 20px; letter-spacing: 2px;">STERILIZATION PROTOCOL</h2>
+                <p style="opacity: 0.6; margin-bottom: 25px; line-height: 1.8;">
+                    Chunkay respiratory gear direct air-flow se connect hota hai, isliye hum "Amanatdari" integrity ke tehat 3-level sanitation process follow karte hain:
+                </p>
+                <ul style="list-style: none; padding: 0; display: grid; gap: 15px;">
+                    <li style="padding: 12px; background: rgba(0, 255, 136, 0.05); border-left: 3px solid var(--primary); font-size: 0.85rem;">
+                        <span style="color: var(--primary);">[A]</span> Medical-Grade UV-C Sterilization after every rental.
+                    </li>
+                    <li style="padding: 12px; background: rgba(0, 255, 136, 0.05); border-left: 3px solid var(--primary); font-size: 0.85rem;">
+                        <span style="color: var(--primary);">[B]</span> Brand New Filters and Nasal Cannulas for every patient.
+                    </li>
+                    <li style="padding: 12px; background: rgba(0, 255, 136, 0.05); border-left: 3px solid var(--primary); font-size: 0.85rem;">
+                        <span style="color: var(--primary);">[C]</span> Internal Air-Path flush using 70% Isopropyl Alcohol.
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        </section>
+            <section class="emergency-logistics" style="padding: 100px 10%; border-top: 1px solid var(--border-color);">
+        <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 60px; align-items: center;">
+            
+            <div class="express-box glass" style="padding: 50px; border-radius: 20px; border: 1px solid #ff4444; background: rgba(255, 68, 68, 0.02);">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px;">
+                    <div>
+                        <h3 style="color: #ff4444; letter-spacing: 2px; margin-bottom: 10px;">EXPRESS O2 DISPATCH</h3>
+                        <p style="opacity: 0.6; font-size: 0.9rem;">Guaranteed emergency delivery for Oxygen Cylinders & Concentrators.</p>
+                    </div>
+                    <div class="timer-icon" style="width: 50px; height: 50px; border: 2px solid #ff4444; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: monospace; color: #ff4444; font-weight: 900; animation: pulse 1s infinite;">
+                        45m
+                    </div>
+                </div>
+
+                <div class="delivery-track" style="height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; position: relative; margin: 40px 0;">
+                    <div style="position: absolute; left: 0; top: 0; height: 100%; width: 75%; background: #ff4444; box-shadow: 0 0 15px #ff4444;"></div>
+                    <div class="plus-icon" style="position: absolute; right: 25%; top: -6px; width: 16px; height: 16px; background: #ff4444;"></div>
+                </div>
+
+                <div class="zone-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 0.8rem; color: var(--text-dim);">
+                    <div style="padding: 10px; border-left: 2px solid #ff4444; background: rgba(255,255,255,0.02);">
+                        <strong style="color: #fff;">ZONE A:</strong> Rawalpindi City, Saddar, Chamanabad (30m)
+                    </div>
+                    <div style="padding: 10px; border-left: 2px solid #ff4444; background: rgba(255,255,255,0.02);">
+                        <strong style="color: #fff;">ZONE B:</strong> Islamabad (F, G, H Sectors), Bahria (45m)
+                    </div>
+                </div>
+            </div>
+
+            <div class="night-support" style="text-align: right;">
+                <h3 style="color: var(--primary); margin-bottom: 20px; letter-spacing: 1px;">24/7 RESPIRATORY HELP</h3>
+                <p style="opacity: 0.6; font-size: 0.9rem; margin-bottom: 30px;">
+                    Chunkay saans ki takleef waqt dekh kar nahi aati, hamara technical staff raat ko bhi on-call mojood hota hai.
+                </p>
+                
+                <div class="support-card glass" style="padding: 25px; display: inline-block; text-align: left; border-right: 4px solid var(--primary);">
+                    <span style="font-size: 0.7rem; color: var(--primary); font-weight: 900;">OPERATIONAL STATUS:</span>
+                    <h4 style="color: #fff; margin: 10px 0;">NIGHT SHIFT ACTIVE</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-dim);">Dial directly for machine troubleshooting or cylinder refills.</p>
+                    <a href="tel:03125166507" class="secondary-btn" style="margin-top: 15px; display: inline-block; padding: 10px 20px; border-color: var(--primary); color: var(--primary);">0312 5166507</a>
+                </div>
+            </div>
+
+        </div>
+            </section>
+                <footer style="padding: 80px 10% 40px; border-top: 1px solid var(--border-color); background: #080808;">
+        <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 60px;">
+            <div class="footer-brand">
+                <div class="logo" style="margin-bottom: 20px;">
+                    <div class="plus-icon"></div>
+                    <span style="font-size: 1.5rem; font-weight: 900; letter-spacing: 2px;">AR NURSING</span>
+                </div>
+                <p style="opacity: 0.5; max-width: 400px; line-height: 1.6;">
+                    Critical Respiratory Node: High-purity oxygen systems and BiPAP/CPAP therapy managed under the principle of Amanatdari.
+                </p>
+            </div>
+            
+            <div class="footer-links">
+                <h4 style="color: var(--primary); margin-bottom: 20px; font-size: 0.9rem; letter-spacing: 1px;">QUICK NODES</h4>
+                <ul style="list-style: none; padding: 0; line-height: 2;">
+                    <li><a href="equip-resp.html" style="color: var(--primary); text-decoration: none;">Oxygen & BiPAP</a></li>
+                    <li><a href="equip-mobility.html" style="color: var(--text-dim); text-decoration: none;">Mobility & Beds</a></li>
+                    <li><a href="contact.html" style="color: var(--text-dim); text-decoration: none;">Emergency Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4 style="color: var(--primary); margin-bottom: 20px; font-size: 0.9rem; letter-spacing: 1px;">DISPATCH</h4>
+                <p style="color: #fff; font-weight: 700;">0312 5166507</p>
+                <p style="color: var(--text-dim); font-size: 0.8rem;">Malik Awais Babar</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; font-size: 0.7rem; color: var(--text-dim); letter-spacing: 1px;">
+            <span>© 2026 AR RESPIRATORY | ACTIVE RESPONSE PROTOCOL</span>
+            <span>HARDWARE-OPTIMIZED V6.0 | RAWALPINDI</span>
+        </div>
+    </footer>
+
+    <script src="ui-effects.js"></script>
+    <script src="booking-handler.js"></script>
+    <script src="app.js"></script>
+
+    <script>
+        window.addEventListener('load', () => {
+            // Force ARApp to load respiratory category on this specific page
+            setTimeout(() => {
+                if (window.ARApp) {
+                    ARApp.filterByCategory('respiratory');
+                    console.log("AR-Protocol: Respiratory Node Auto-Filtered.");
+                }
+            }, 500); 
+        });
+    </script>
+
+</body>
+</html>
